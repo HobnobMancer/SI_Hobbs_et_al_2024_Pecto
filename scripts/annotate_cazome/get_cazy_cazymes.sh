@@ -46,15 +46,15 @@
 # Write the protein accessions, genomic accessions and CAZy families to tab delimited lists
 
 cazevolve_get_cazy_cazymes \
-    data/pectobacteriaceae/proteomes \
+    data/pectobact/proteomes \
     data/cazy/cazy_db \
-    data/pectobacteriaceae/cazomes/dbcan_input \
-    data/pectobacteriaceae/cazomes/pecto_fam_genomes \
-    data/pectobacteriaceae/cazomes/pecto_fam_genomes_proteins 
+    data/pectobact/cazomes/dbcan_input \
+    data/pectobact/cazomes/pecto_fam_genomes \
+    data/pectobact/cazomes/pecto_fam_genomes_proteins 
 
 cazevolve_get_cazy_cazymes \
-    data/pd/proteomes \
+    data/pecto_dic/proteomes \
     data/cazy/cazy_db \
-    data/pd/cazomes/dbcan_input \
-    data/pd/cazomes/pd_fam_genomes \
-    data/pd/cazomes/pd_fam_genomes_proteins 
+    data/pecto_dic/cazomes/dbcan_input \
+    data/pecto_dic/cazomes/pd_fam_genomes \
+    data/pecto_dic/cazomes/pd_fam_genomes_proteins 
