@@ -157,7 +157,10 @@ conda install --file requirements.txt -y
     6. `concatenate_cds.py`
     7. `raxml_ng_build_tree.sh`
 5. Explore CAZome composition
+    1. `explore_pectobact_cazome.ipynb`
+    2. `explore_pecto_dic_cazome.ipynb`
 6. Compare trees
+    1. `build_tanglegrams.R`
 7. Identify networkds of co-evolving CAZy families
     1. `find_colevolving.sh`
 
