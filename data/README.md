@@ -23,8 +23,20 @@ After running the analysis, this directory will contain several additional dirs:
     │   │   └── *.fna
     │   ├── proteomes
     │   │   └── *.faa
-    │   └── cazomes
-    │       ├── pd_fam_genomes
-    │       └── pd_fam_genomes_proteins
+    │   ├── cazomes
+    │   │   ├── pd_fam_genomes
+    │   │   └── pd_fam_genomes_proteins
+    │   └── tree
+    │       ├── genomes
+    │       │   ├── proteins
+    │       │   ├── cds
+    │       │   └── gbk
+    │       ├── orthologues
+    │       ├── sco_proteins_aligned
+    │       ├── sco_cds
+    │       ├── sco_cds_aligned
+    │       ├── concatenated_cds
+    │       └── tree
     └── README.md
 ```
+
