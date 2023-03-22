@@ -136,6 +136,8 @@ conda install --file requirements.txt -y
     4. `get_dbcan_cazymes_pectobact.sh` - Parse dbCAN output for _Pectobacteriaceae_
     5. `get_dbcan_cazymes_pecto_dic.sh` - Parse dbCAN outout for _Pectobacterium_ and _Dickeya_
 3. Run ANI analysis and build dendrogram
+    1. `run_anim.sh`
+    2. `build_anim_tree.R`
 4. Reconstruct phylogenetic tree
     1. `annotate_genomes.sh`
     2. `find_orthologues.sh`
