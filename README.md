@@ -74,6 +74,22 @@ conda install --file requirements.txt -y
     4. `build_cazyme_db.sh` - Build a local CAZyme db
 2. Annotate CAZomes
     1. `get_cazy_cazymes.sh` - Retrieve CAZy family annotations from the local CAZyme db for proteins in the download genomes for both the _Pectobacteriaceae_, and _Pectobacterium_ and _Dickeya_ datasets.
+    2. `run_dbcan_dbcan_pectobact.sh` - Run dbCAN version 2 on _Pectobacteriaceae_ proteomes
+    3. `run_dbcan_pecto_dic.sh` - Run dbCAN version 3 on _Pectobacterium_ and _Dickeya_ proteomes
+    4. `get_dbcan_cazymes_pectobact.sh` - Parse dbCAN output for _Pectobacteriaceae_
+    5. `get_dbcan_cazymes_pecto_dic.sh` - Parse dbCAN outout for _Pectobacterium_ and _Dickeya_
+3. Run ANI analysis and build dendrogram
+4. Reconstruct phylogenetic tree
+    1. `annotate_genomes.sh`
+    2. `find_orthologues.sh`
+    3. `align_scos.sh`
+    4. `extract_cds.py`
+    5. `backtranslates.sh`
+    6. `concatenate_cds.py`
+    7. `raxml_ng_build_tree.sh`
+5. Explore CAZome composition
+6. Compare trees
+7. Identify networkds of co-evolving CAZy families
 
 # Reproducing the analyses
 
@@ -189,62 +205,7 @@ The _Pectobacterium_ and _Dickeya_ lists were written to:
 2. `data/pecto_dic/cazomes/pd_fam_genomes_proteins`
 
 
-## Explore CAZome composition
-
-The module `cazomevolve.cazome.explore` contains functions for exploring the CAZome annotated by `cazomevolve`. These are:
-
-```python
-from cazomevolve.cazome.explore import (
-    cazome_sizes,
-    identify_families,
-    parse_data,
-    pca,
-    plot,
-    taxonomies,
-)
-
-# parse the output from cazomevolve tab delimited lists
-parse_data.get_dbcan_fams_data()
-parse_data.build_fam_freq_df()
-parse_data.index_df()  # index genome, genus and species to be row names
-
-# add taxonomic information for taxonomic context
-taxonomies.add_tax_info()
-taxonomies.get_gtdb_db_tax_dict()  # in development
-taxonomies.get_gtdb_search_tax_dict()
-taxonomies.get_ncbi_tax_dict()  # in development
-taxonomies.get_group_sample_sizes()  # returns the number of genomes per group (genus or species)
-
-# summarise the size of the cazomes
-cazome_sizes.get_cazome_size_df()
-cazome_sizes.get_proteome_size()
-cazome_sizes.get_cazome_proportion_df()
-cazome_sizes.get_num_of_fams_per_group()
-
-# identify the core CAZome, i.e. families that appear in every genome
-identify_families.identify_core_cazome()
-identify_families.get_core_fam_freqs()
-
-# identify families that are specific to a group (i.e. genus or species)
-identify_families.get_group_specific_fams()
-
-# identity families that always appear together 
-identify_families.get_cooccurring_fams()  # across all genomes
-identify_families.get_grps_cooccurring_fams()  # in a specific group (i.e. genus or species)
-
-# visually summarise the data
-plot.get_clustermap()  # clustermap of cazy family freqs - potentially add clustering by cazy class freqs
-
-# perform and visualise PCA
-pca.perform_pca()
-pca.plot_explained_variance()
-pca.plot_spree()
-pca.plot_pca()  # project genomes onto PCs
-pca.plot_loadings()
-```
-
-## Run ANI analysis
-
+## Run ANI analysis and construct dendrogram
 
 
 ## Reconstruct phylogenetic tree
@@ -348,6 +309,74 @@ The resulting tree in the [original format](https://hobnobmancer.github.io/Folta
 ```bash
 bash scripts/tree/phylo/raxml_ng_build_tree.sh   # need to edit script
 ```
+
+
+
+
+
+
+
+## Explore CAZome composition
+
+The module `cazomevolve.cazome.explore` contains functions for exploring the CAZome annotated by `cazomevolve`. These are:
+
+```python
+from cazomevolve.cazome.explore import (
+    cazome_sizes,
+    identify_families,
+    parse_data,
+    pca,
+    plot,
+    taxonomies,
+)
+
+# parse the output from cazomevolve tab delimited lists
+parse_data.get_dbcan_fams_data()
+parse_data.build_fam_freq_df()
+parse_data.index_df()  # index genome, genus and species to be row names
+
+# add taxonomic information for taxonomic context
+taxonomies.add_tax_info()
+taxonomies.get_gtdb_db_tax_dict()  # in development
+taxonomies.get_gtdb_search_tax_dict()
+taxonomies.get_ncbi_tax_dict()  # in development
+taxonomies.get_group_sample_sizes()  # returns the number of genomes per group (genus or species)
+
+# summarise the size of the cazomes
+cazome_sizes.get_cazome_size_df()
+cazome_sizes.get_proteome_size()
+cazome_sizes.get_cazome_proportion_df()
+cazome_sizes.get_num_of_fams_per_group()
+
+# identify the core CAZome, i.e. families that appear in every genome
+identify_families.identify_core_cazome()
+identify_families.get_core_fam_freqs()
+
+# identify families that are specific to a group (i.e. genus or species)
+identify_families.get_group_specific_fams()
+
+# identity families that always appear together 
+identify_families.get_cooccurring_fams()  # across all genomes
+identify_families.get_grps_cooccurring_fams()  # in a specific group (i.e. genus or species)
+
+# visually summarise the data
+plot.get_clustermap()  # clustermap of cazy family freqs - potentially add clustering by cazy class freqs
+
+# perform and visualise PCA
+pca.perform_pca()
+pca.plot_explained_variance()
+pca.plot_spree()
+pca.plot_pca()  # project genomes onto PCs
+pca.plot_loadings()
+```
+
+
+
+## Compare tree
+
+### Compare the ANI-based dendrogram and family-frequency based dendrogram
+
+### Compare the phylogenetic tree and family-frequency based dendrogram
 
 ## Identify networks of co-evolving CAZy families
 
