@@ -279,9 +279,9 @@ The _Pectobacterium_ and _Dickeya_ lists were written to:
 
 ## Run ANI analysis and construct dendrogram
 
-The software package `pyani` [Pritchard et al]() was used to perform an average nucleotide identify (ANI) comparison between all pairs of _Pectobacteriaceae_ genomes, using the ANIm method.
+The software package `pyani` [Pritchard et al](https://doi.org/10.1039/C5AY02550H) was used to perform an average nucleotide identify (ANI) comparison between all pairs of _Pectobacteriaceae_ genomes, using the ANIm method.
 
->
+>Pritchard et al. (2016) "Genomics and taxonomy in diagnostics for food security: soft-rotting enterobacterial plant pathogens" Anal. Methods 8, 12-24
 
 ```bash
 scripts/tree/ani/run_anim.sh
