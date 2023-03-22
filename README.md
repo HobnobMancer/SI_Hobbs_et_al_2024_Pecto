@@ -398,10 +398,6 @@ scripts/tree/phylo/raxml_ng_build_tree.sh
 
 
 
-
-
-
-
 ## Explore CAZome composition
 
 The module `cazomevolve.cazome.explore` contains functions for exploring the CAZome annotated by `cazomevolve`. These are:
