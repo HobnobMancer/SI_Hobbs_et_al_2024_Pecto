@@ -29,9 +29,9 @@ After running the analysis, this directory will contain several additional dirs:
     │   └── tree
     │       ├── genomes
     │       │   ├── proteins
-    │       │       └── *.faa
+    │       │   │   └── *.faa
     │       │   ├── cds
-    │       │       └── *.fna
+    │       │   │   └── *.fna
     │       │   └── gbk
     │       │       └── *.gbf
     │       ├── orthologues
