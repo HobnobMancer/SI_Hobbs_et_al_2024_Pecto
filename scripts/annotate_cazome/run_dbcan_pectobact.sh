@@ -44,7 +44,7 @@
 # Run dbCAN version 2 across Pectobacteriaceae protein sequences
 
 cazevolve_run_dbcan \
-    data/pectobacteriaceae/cazomes/dbcan_input \
-    data/pectobacteriaceae/cazomes/dbcan_output \
+    data/pectobact/cazomes/dbcan_input \
+    data/pectobact/cazomes/dbcan_output \
     --version_2 \
 
