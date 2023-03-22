@@ -174,13 +174,13 @@ conda install --file requirements.txt -y
 
 ```bash
 # download Pectobacteriaceae genomes from GenBank
-bash scripts/download/download_pecto_genomes.sh <email>
+scripts/download/download_pecto_genomes.sh <email>
 ```
 
 **Note:** With the continual addition of new genomic assemblies to the NCBI Assembly database, repeating the download of _Pectobacteriaceae_ genomes may generate a different dataset to that presented in Hobbs _et al._. To repeat the analysis presented in the manuscript, run the following command from the root of the directory to configure `ncbi-genome-download` to download the genomic assemblies of the genomes used in the manuscript:
 
 ```bash
-bash scripts/download/download_same_pecto_genomes.sh
+scripts/download/download_same_pecto_genomes.sh
 ```
 
 In both cases, the downloaded genomic sequence files were written to the dir `data/pectobact/genomes`, the downloaded protein FASTA files were written to `data/pectobact/proteomes`.
@@ -192,7 +192,7 @@ Configure `ncbi-genome-download` to download genomic assemblies (genome sequence
 ```bash
 # download Pectobacterium and dickeya genomes from RefSeq
 # listed in a supplementary_file_1
-bash scripts/download_pd_genomes.sh
+scripts/download_pd_genomes.sh
 ```
 
 The downloaded genomic sequence files were written to the dir `data/pecto_dic/genomes`, the downloaded protein FASTA files were written to `data/pecto_dic/proteomes`.
@@ -207,7 +207,7 @@ bioRxiv 2022.12.02.518825; doi: https://doi.org/10.1101/2022.12.02.518825
 
 ```bash
 # create a local CAZyme database
-bash scripts/build_cazyme_db.sh <email>
+scripts/build_cazyme_db.sh <email>
 ```
 
 This generated the local CAZyme database `data/cazy/cazy_db`.
@@ -220,7 +220,7 @@ This generated the local CAZyme database `data/cazy/cazy_db`.
 Configure using `cazomevolve` to identify CAZymes classified in the local CAZyme database, for both the _Pectobacteriaceae_, and _Pectobacterium_ & _Dickeya data sets.
 
 ```bash
-bash scripts/annotate_cazome/get_cazy_cazymes.sh
+scripts/annotate_cazome/get_cazy_cazymes.sh
 ```
 
 For _Pectobacteriaceae_, and the _Pectobacterium_ & _Dickeya_ datasets two tab delimited lists were created:
@@ -249,10 +249,10 @@ Run the following command from the root of this directory. *Note: depending on t
 
 ```bash
 # run dbcan for the pectobacteriaceae data set - using dbCAN version >= 2
-bash scripts/run_dbcan_pectobact.sh
+scripts/run_dbcan_pectobact.sh
 
 # run dbcan for the pectobacterium&dickeya data set - using dbCAN version >= 3
-bash scripts/run_dbcan_pecto_dic.sh
+scripts/run_dbcan_pecto_dic.sh
 ```
 
 After running dbCAN, use the following commands to parse the output from dbCAN and add the predicted CAZy family annotations, protein accessions and genomic accessions to the tab delimited lists created above.
@@ -261,10 +261,10 @@ The commands run the `cazomevolve` command `cazevolve_get_dbcan` which can be us
 
 ```bash
 # parse pectobacteriaceae dbcan output
-bash scripts/get_dbcan_cazymes_pectobact.sh
+scripts/get_dbcan_cazymes_pectobact.sh
 
 # parse pectobacterium and dickeya dbcan output
-bash scripts/get_dbcan_cazymes_pecto_dic.sh
+scripts/get_dbcan_cazymes_pecto_dic.sh
 ```
 
 At the end, four plain text files will be generated, containing tab separated data:
@@ -285,7 +285,7 @@ The software package `pyani` [Pritchard et al]() was used to perform an average 
 >
 
 ```bash
-bash scripts/tree/ani/run_anim.sh
+scripts/tree/ani/run_anim.sh
 ```
 
 This created a pyani database in `data/pectobact/tree`. Graphical outputs summarising the pyani analysis were written to `results/pectobact/tree/anim`.
@@ -310,7 +310,7 @@ aligned single-copy orthologues, all downloaded RefSeq genomes were reannotated 
 > Hyatt D, Chen GL, Locascio PF, Land ML, Larimer FW, Hauser LJ. Prodigal: prokaryotic gene recognition and translation initiation site identification. BMC Bioinformatics. 2010 Mar 8;11:119. doi: 10.1186/1471-2105-11-119. PMID: 20211023; PMCID: PMC2848648.
 
 ```bash
-bash scripts/tree/phylo/annotate_genomes.sh
+scripts/tree/phylo/annotate_genomes.sh
 ```
 
 The annotate features were written to the following directories:  
@@ -326,7 +326,7 @@ Orthologues present in the genomes were identified using [`orthofinder`](https:/
 > Emms, D.M. and Kelly, S. (2019) OrthoFinder: phylogenetic orthology inference for comparative genomics. [Genome Biology 20:238](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1832-y)
 
 ```bash
-bash scripts/tree/phylo/find_orthologues.sh
+scripts/tree/phylo/find_orthologues.sh
 ```
 
 The Orthofind output was written to `data/pecto_dic/tree/orthologues`. The SCO sequences are written to the dir `data/pecto_dic/tree/orthologues/Results_<date>/Single_Copy_Orthologue_Sequences`.
@@ -338,7 +338,7 @@ Each collection of single-copy orthologous was aligned using [`MAFFT`](https://m
 The output from `MAFFT` (the aligned files) are placed in the `data/pecto_dic/tree/sco_proteins_aligned` directory.
 
 ```bash
-bash scripts/tree/phylo/align_scos.sh <path to dir containing SCO seqs from orthofinder>
+scripts/tree/phylo/align_scos.sh <path to dir containing SCO seqs from orthofinder>
 ```
 
 ### Collect Single-Copy Orthologues CDS sequences
@@ -361,7 +361,7 @@ The single-copy orthologue CDS sequences were threaded onto the corresponding al
 The results can be reproduced by executing the `backtranslate.sh` script from this directory.
 
 ```bash
-bash scripts/tree/phylo/backtranslate.sh
+scripts/tree/phylo/backtranslate.sh
 ```
 
 The backtranslated CDS sequences are placed in the `data/pecto_dic/tree/sco_cds_aligned` directory.
@@ -393,7 +393,7 @@ Tree reconstructions are placed in the `tree` directory. The best estimate tree 
 The resulting tree in the [original format](https://hobnobmancer.github.io/Foltanyi_et_al_2022/results/2022_annotated_thermotoga_tree.pdf) and after [rerooting using the outgroup](https://hobnobmancer.github.io/Foltanyi_et_al_2022/results/2022_annotated_thermotoga_tree.rerooted.pdf) are stored in the `results` directory.
 
 ```bash
-bash scripts/tree/phylo/raxml_ng_build_tree.sh
+scripts/tree/phylo/raxml_ng_build_tree.sh
 ```
 
 
@@ -467,5 +467,5 @@ pca.plot_loadings()
 ## Identify networks of co-evolving CAZy families
 
 ```bash
-bash scripts/coevolution/find_colevolving.sh
+scripts/coevolution/find_colevolving.sh
 ```
