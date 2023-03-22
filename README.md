@@ -4,6 +4,8 @@
 
 This repository contains supplementary information for analyses reported in Hobbs et al. (2023), describing the evolution of the CAZome.
 
+Run all commands provided in the walkthrough from the root of this directory.
+
 ## How to use this repository.
 
 You can use this repository like a website, to browse and see how we performed the analysis, or you can download it to inspect, verify, reproduce and build on our analysis.
@@ -35,15 +37,13 @@ conda activate pectobacteriaceae
 conda install --file requirements.txt -y
 ```
 
-All scripts used to generate the phylogenomic analysis are found in the `scripts/` subdirectory, and can be run in order to regenerate the analysis:
-1. `download_pecto_genomes.sh` - Downloads all genomes from NCBI Assembly when querying using the term 'Pectobacteriaceae'
-2. `download_pd_genomes.sh` - Configures `ncbi-genome-download` to retrieve genomes for a provided list of Assembly accessions
-3. `build_cazyme_db.sh` - Build a local CAZyme db
-4. `get_cazy_cazymes.sh` - Retrieve CAZy family annotations from the local CAZyme db for proteins in the download genomes for both the _Pectobacteriaceae_, and _Pectobacterium_ and _Dickeya_ datasets.
-
-## Directory structure
-
-_Add output from `tree` command_
+1. Download datasets
+    1. `download_pecto_genomes.sh` - Downloads all genomes from NCBI Assembly when querying using the term 'Pectobacteriaceae'
+    2. `download_same_pecto_genomes.sh` - Downloads the genomes used in the analysis presented in the manuscript
+    3. `download_pd_genomes.sh` - Configures `ncbi-genome-download` to retrieve genomes for a provided list of Assembly accessions
+    4. `build_cazyme_db.sh` - Build a local CAZyme db
+2. Annotate CAZomes
+    1. `get_cazy_cazymes.sh` - Retrieve CAZy family annotations from the local CAZyme db for proteins in the download genomes for both the _Pectobacteriaceae_, and _Pectobacterium_ and _Dickeya_ datasets.
 
 # Reproducing the analyses
 
@@ -51,14 +51,20 @@ _Add output from `tree` command_
 
 ### _Pectobacteriaceae_
 
-Download the genomic assemblies (genome sequence and protein sequence FASTA files) for _Pectobacteriaceae_ complete GenBank genomes from NCBI Assembly, and decompress the downloaded files.
+`cazomevolve` was used to download all complete _Pectobacteriaceae_ genomic assemblies (in genome sequence and protein sequence FASTA file format) from NCBI Assembly, by querying the NCBI Taxonomy database and retrieving all genomic assemblies linked to the _Pectobacteriaceae_ (NCBI:txid1903410). To repeat this method, run the following command from the root of this directory:
 
 ```bash
 # download Pectobacteriaceae genomes from GenBank
-scripts/download_pecto_genomes.sh <email>
+scripts/download/download_pecto_genomes.sh <email>
 ```
 
-The downloaded genomic sequence files were written to the dir `data/pectobacteriaceae/genomes`, the downloaded protein FASTA files were written to `data/pectobacteriaceae/proteomes`.
+**Note:** With the continual addition of new genomic assemblies to the NCBI Assembly database, repeating the download of _Pectobacteriaceae_ genomes may generate a different dataset to that presented in Hobbs _et al._. To repeat the analysis presented in the manuscript, run the following command from the root of the directory to configure `ncbi-genome-download` to download the genomic assemblies of the genomes used in the manuscript:
+
+```bash
+scripts/download/download_same_pecto_genomes.sh
+```
+
+In both cases, the downloaded genomic sequence files were written to the dir `data/pectobact/genomes`, the downloaded protein FASTA files were written to `data/pectobact/proteomes`.
 
 ### _Pectobacterium_ and _Dickeya_
 
@@ -70,7 +76,7 @@ Configure `ncbi-genome-download` to download genomic assemblies (genome sequence
 scripts/download_pd_genomes.sh
 ```
 
-The downloaded genomic sequence files were written to the dir `data/pd/genomes`, the downloaded protein FASTA files were written to `data/pd/proteomes`.
+The downloaded genomic sequence files were written to the dir `data/pecto_dic/genomes`, the downloaded protein FASTA files were written to `data/pecto_dic/proteomes`.
 
 ### Build a local CAZyme database
 
@@ -205,3 +211,4 @@ pca.plot_loadings()
 ## Reconstruct phylogenetic tree
 
 ## Identify networks of co-evolving CAZy families
+
