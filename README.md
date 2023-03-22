@@ -28,6 +28,8 @@ Please raise an issue at the corresponding `GitHub` page:
 
 ## Repo structure
 
+The structure of this repository:
+
 ```bash
 .
 ├── data
@@ -37,6 +39,8 @@ Please raise an issue at the corresponding `GitHub` page:
 │   └── README.md
 ├── LICENSE
 ├── notebooks
+│   ├── explore_pectobact_cazomes.ipynb
+│   └── explore_pecto_dic_cazomes.ipynb
 ├── README.md
 ├── requirements.txt
 └── scripts
@@ -46,6 +50,8 @@ Please raise an issue at the corresponding `GitHub` page:
     │   ├── get_dbcan_cazymes_pecto_dic.sh
     │   ├── run_dbcan_pectobact.sh
     │   └── run_dbcan_pecto_dic.sh
+    ├── coevolution
+    │   └── find_coevolving.sh
     ├── download
     │   ├── build_cazyme_database.sh
     │   ├── download_pd_genomes.sh
@@ -54,6 +60,7 @@ Please raise an issue at the corresponding `GitHub` page:
     ├── README.md
     └── tree
         ├── analysis
+        │   └── build_tanglegrams.R
         ├── ani
         │   ├── build_anim_tree.R
         │   └── run_anim.sh
@@ -152,6 +159,7 @@ conda install --file requirements.txt -y
 5. Explore CAZome composition
 6. Compare trees
 7. Identify networkds of co-evolving CAZy families
+    1. `find_colevolving.sh`
 
 # Reproducing the analyses
 
@@ -455,3 +463,6 @@ pca.plot_loadings()
 
 ## Identify networks of co-evolving CAZy families
 
+```bash
+bash scripts/coevolution/find_colevolving.sh
+```

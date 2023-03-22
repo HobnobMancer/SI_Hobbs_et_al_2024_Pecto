@@ -1,6 +1,7 @@
 adjusttext
 cazomevolve
 cazy_webscraper
+jupyter
 mafft
 matplotlib
 numpy
