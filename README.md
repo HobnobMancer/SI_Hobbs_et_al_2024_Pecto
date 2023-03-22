@@ -26,6 +26,34 @@ Please raise an issue at the corresponding `GitHub` page:
 
 * [Issues for this repository](https://github.com/HobnobMancer/SI_Hobbs_et_al_2023_Pecto/issues)
 
+## Repo structure
+
+.
+├── LICENSE
+├── README.md
+├── data
+│   └── genomic_accessions
+│       ├── pectobact_accessions
+│       └── pecto_dic_accessions
+├── notebooks
+└── scripts
+    ├── README.md
+    ├── annotate_cazome
+    ├── download
+    │   ├── build_cazyme_database.sh
+    │   ├── download_pd_genomes.sh
+    │   ├── download_pecto_genomes.sh
+    │   └── download_same_pecto_genomes.sh
+    ├── get_cazy_cazymes.sh
+    ├── get_dbcan_cazymes_pd.sh
+    ├── get_dbcan_cazymes_pecto.sh
+    ├── run_dbcan_pd.sh
+    ├── run_dbcan_pectobacteriaceae.sh
+    └── tree
+        ├── analysis
+        ├── ani
+        └── phylo
+
 ## Reproducing analyses (quickstart)
 
 You can use this archive to browse, validate, reproduce, or build on the phylogenomics analysis for the Hobbs et al. (2023) manuscript.
