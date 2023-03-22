@@ -66,6 +66,53 @@ Please raise an issue at the corresponding `GitHub` page:
         └── README.md
 ```
 
+Structure of the `data` directory after the analysis:
+
+```bash
+.
+└── data
+    ├── genomic_accessions
+    │   ├── pectobact_accessions
+    │   └── pecto_dic_accessions
+    ├── pectobact
+    │   ├── genomes
+    │   │   └── *.fna
+    │   ├── proteomes
+    │   │   └── *.faa
+    │   └── cazomes
+    │       ├── pecto_fam_genomes
+    │       └── pecto_fam_genomes_proteins
+    ├── pecto_dic
+    │   ├── genomes
+    │   │   └── *.fna
+    │   ├── proteomes
+    │   │   └── *.faa
+    │   ├── cazomes
+    │   │   ├── pd_fam_genomes
+    │   │   └── pd_fam_genomes_proteins
+    │   └── tree
+    │       ├── genomes
+    │       │   ├── proteins
+    │       │   │   └── *.faa
+    │       │   ├── cds
+    │       │   │   └── *.fna
+    │       │   └── gbk
+    │       │       └── *.gbf
+    │       ├── orthologues
+    │       ├── sco_proteins_aligned
+    │       ├── sco_cds
+    │       ├── sco_cds_aligned
+    │       ├── concatenated_cds
+    │       │   ├── concatenated.fasta
+    │       │   └── concatenated.part
+    │       └── tree
+    │           ├── 01_check
+    │           ├── 02_parse
+    │           ├── 03_infer
+    │           └── 04_bootstrap
+    └── README.md
+```
+
 ## Reproducing analyses (quickstart)
 
 You can use this archive to browse, validate, reproduce, or build on the phylogenomics analysis for the Hobbs et al. (2023) manuscript.
@@ -317,7 +364,7 @@ Tree reconstructions are placed in the `tree` directory. The best estimate tree 
 The resulting tree in the [original format](https://hobnobmancer.github.io/Foltanyi_et_al_2022/results/2022_annotated_thermotoga_tree.pdf) and after [rerooting using the outgroup](https://hobnobmancer.github.io/Foltanyi_et_al_2022/results/2022_annotated_thermotoga_tree.rerooted.pdf) are stored in the `results` directory.
 
 ```bash
-bash scripts/tree/phylo/raxml_ng_build_tree.sh   # need to edit script
+bash scripts/tree/phylo/raxml_ng_build_tree.sh
 ```
 
 
