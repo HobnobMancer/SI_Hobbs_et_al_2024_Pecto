@@ -1,0 +1,16 @@
+adjusttext
+cazomevolve
+cazy_webscraper
+mafft
+matplotlib
+numpy
+orthofinder
+pandas
+pyani
+prodigal
+raxml-ng
+seaborn
+sklearn
+t-coffee
+tqdm
+upsetplot
