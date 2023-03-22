@@ -64,7 +64,11 @@ scripts/download/download_pecto_genomes.sh <email>
 scripts/download/download_same_pecto_genomes.sh
 ```
 
+<<<<<<< HEAD
 In both cases, the downloaded genomic sequence files were written to the dir `data/pectobact/genomes`, the downloaded protein FASTA files were written to `data/pectobact/proteomes`.
+=======
+In both cases, the downloaded genomic sequence files were written to the dir `data/pectobacteriaceae/genomes`, the downloaded protein FASTA files were written to `data/pectobacteriaceae/proteomes`.
+>>>>>>> Combine READMEs
 
 ### _Pectobacterium_ and _Dickeya_
 
@@ -76,7 +80,11 @@ Configure `ncbi-genome-download` to download genomic assemblies (genome sequence
 scripts/download_pd_genomes.sh
 ```
 
+<<<<<<< HEAD
 The downloaded genomic sequence files were written to the dir `data/pecto_dic/genomes`, the downloaded protein FASTA files were written to `data/pecto_dic/proteomes`.
+=======
+The downloaded genomic sequence files were written to the dir `data/pd/genomes`, the downloaded protein FASTA files were written to `data/pd/proteomes`.
+>>>>>>> Combine READMEs
 
 ### Build a local CAZyme database
 
