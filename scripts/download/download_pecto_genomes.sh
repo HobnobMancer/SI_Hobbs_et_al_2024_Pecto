@@ -49,7 +49,7 @@ cazevolve_download_genomes \
     $1 \
     'Pectobacteriaceae' \
     genomic \
-    data/pectobacteriaceae/genomes \
+    data/pectobact/genomes \
     -G \
     -A all
 
@@ -57,10 +57,10 @@ cazevolve_download_genomes \
     $1 \
     'Pectobacteriaceae' \
     protein \
-    data/pectobacteriaceae/proteomes \
+    data/pectobact/proteomes \
     -G \
     -A all
 
 
-unzip data/genomes/*.gz
-unzip data/proteome/*.gz
+unzip data/pectobact/genomes/*.gz
+unzip data/pectobact/proteome/*.gz
