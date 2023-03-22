@@ -191,7 +191,6 @@ Configure `ncbi-genome-download` to download genomic assemblies (genome sequence
 
 ```bash
 # download Pectobacterium and dickeya genomes from RefSeq
-# listed in a supplementary_file_1
 scripts/download_pd_genomes.sh
 ```
 
