@@ -44,6 +44,6 @@
 # Parse the output from dbCAN after parsing Pectobacterium and Dickeya protein seqs
 
 cazevolve_get_dbcan_cazymes \
-    data/pd/cazomes/dbcan_output \
-    data/pd/cazomes/pd_fam_genomes \
-    data/pd/cazomes/pd_fam_genomes_proteins 
+    data/pecto_dic/cazomes/dbcan_output \
+    data/pecto_dic/cazomes/pd_fam_genomes \
+    data/pecto_dic/cazomes/pd_fam_genomes_proteins 

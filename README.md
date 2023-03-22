@@ -28,6 +28,7 @@ Please raise an issue at the corresponding `GitHub` page:
 
 ## Repo structure
 
+```bash
 .
 ├── LICENSE
 ├── README.md
@@ -53,6 +54,7 @@ Please raise an issue at the corresponding `GitHub` page:
         ├── analysis
         ├── ani
         └── phylo
+```
 
 ## Reproducing analyses (quickstart)
 
@@ -129,7 +131,7 @@ This generated the local CAZyme database `data/cazy/cazy_db`.
 Configure using `cazomevolve` to identify CAZymes classified in the local CAZyme database, for both the _Pectobacteriaceae_, and _Pectobacterium_ & _Dickeya data sets.
 
 ```bash
-scipts/get_cazy_cazymes.sh
+scipts/annotate_cazome/get_cazy_cazymes.sh
 ```
 
 For _Pectobacteriaceae_, and the _Pectobacterium_ & _Dickeya_ datasets two tab delimited lists were created:
@@ -137,14 +139,14 @@ For _Pectobacteriaceae_, and the _Pectobacterium_ & _Dickeya_ datasets two tab d
 2. Listing the CAZy family, genomic accession and protein accession per line
 
 The _Pectobacteriaceae_ lists were written out respectively to:
-1. data/pectobacteriaceae/cazomes/pecto_fam_genomes \
-2. data/pectobacteriaceae/cazomes/pecto_fam_genomes_proteins 
+1. `data/pectobact/cazomes/pecto_fam_genomes`
+2. `data/pectobact/cazomes/pecto_fam_genomes_proteins`
 
 The _Pectobacterium_ and _Dickeya_ lists were written out respectively to:
-1. data/pd/cazomes/pd_fam_genomes \
-2. data/pd/cazomes/pd_fam_genomes_proteins 
+1. `data/pecto_dic/cazomes/pd_fam_genomes`
+2. `data/pecto_dic/cazomes/pd_fam_genomes_proteins`
 
-Proteins in the download protein FASTA files that were not listed in the local CAZyme database were written to `data/pectobacteriaceae/cazomes/dbcan_input` (for _Pectobacteriaceae_) and `data/pd/cazomes/dbcan_input` (for _Pectobacterium_ and _Dickeya_).
+Proteins in the download protein FASTA files that were not listed in the local CAZyme database were written to `data/pectobact/cazomes/dbcan_input` for _Pectobacteriaceae_, and `data/pecto_dic/cazomes/dbcan_input` for _Pectobacterium_ and _Dickeya_.
 
 ### Get dbCAN predicted CAZymes
 
@@ -154,31 +156,38 @@ To retrieve the most comprehensive CAZome for each genome, protein sequences not
 
 Run the following command from the root of this directory. *Note: depending on the computer resources this may take multiple days to complete*
 
-**Note:** The following commands MUST be run from the same directory containing the `db` directory created when installing `dbCAN`.
+**Note:** The following commands MUST be run from the same directory containing the `db` directory created when installing `dbCAN` - the following commands presumt the `db` dir is located in the root of this repository.
 
 ```bash
-# run dbcan for the pectobacteriaceae data set
-scripts/run_dbcan_pectobacteriaceae.sh
+# run dbcan for the pectobacteriaceae data set - using dbCAN version >= 2
+scripts/run_dbcan_pectobact.sh
+
+# run dbcan for the pectobacterium&dickeya data set - using dbCAN version >= 3
+scripts/run_dbcan_pecto_dic.sh
 ```
 
-```bash
-# run dbcan for the pectobacterium&dickeya data set
-scripts/run_dbcan_pd.sh
-```
-
-After running dbCAN, using the following commands to parse the output from dbCAN and add the predicted CAZy family annotations, protein accessions and genomic accessions to the tab delimited lists created above.
+After running dbCAN, use the following commands to parse the output from dbCAN and add the predicted CAZy family annotations, protein accessions and genomic accessions to the tab delimited lists created above.
 
 The commands run the `cazomevolve` command `cazevolve_get_dbcan` which can be used to parse the output from `dbCAN` version 2 and version 3.
 
 ```bash
 # parse pectobacteriaceae dbcan output
-scripts/get_dbcan_cazymes_pecto.sh
+scripts/get_dbcan_cazymes_pectobact.sh
+
+# parse pectobacterium and dickeya dbcan output
+scripts/get_dbcan_cazymes_pecto_dic.sh
 ```
 
-```bash
-# parse pectobacterium and dickeya dbcan output
-scripts/get_dbcan_cazymes_pd.sh
-```
+At the end, four plain text files will be generated, containing tab separated data:
+
+The _Pectobacteriaceae_ lists were written to:
+1. `data/pectobact/cazomes/pecto_fam_genomes`
+2. `data/pectobact/cazomes/pecto_fam_genomes_proteins`
+
+The _Pectobacterium_ and _Dickeya_ lists were written to:
+1. `data/pecto_dic/cazomes/pd_fam_genomes`
+2. `data/pecto_dic/cazomes/pd_fam_genomes_proteins`
+
 
 ## Explore CAZome composition
 

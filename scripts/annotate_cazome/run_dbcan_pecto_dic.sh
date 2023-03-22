@@ -44,6 +44,5 @@
 # Run dbCAN version 3 across Pectobacterium and Dickeya protein sequences
 
 cazevolve_run_dbcan \
-    data/pd/cazomes/dbcan_input \
-    data/pd/cazomes/dbcan_output
-
+    data/pecto_dic/cazomes/dbcan_input \
+    data/pecto_dic/cazomes/dbcan_output
