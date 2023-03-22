@@ -30,30 +30,40 @@ Please raise an issue at the corresponding `GitHub` page:
 
 ```bash
 .
-├── LICENSE
-├── README.md
 ├── data
-│   └── genomic_accessions
-│       ├── pectobact_accessions
-│       └── pecto_dic_accessions
+│   ├── genomic_accessions
+│   │   ├── pectobact_accessions
+│   │   └── pecto_dic_accessions
+│   └── README.md
+├── LICENSE
 ├── notebooks
+├── README.md
+├── requirements.txt
 └── scripts
-    ├── README.md
     ├── annotate_cazome
+    │   ├── get_cazy_cazymes.sh
+    │   ├── get_dbcan_cazymes_pectobact.sh
+    │   ├── get_dbcan_cazymes_pecto_dic.sh
+    │   ├── run_dbcan_pectobact.sh
+    │   └── run_dbcan_pecto_dic.sh
     ├── download
     │   ├── build_cazyme_database.sh
     │   ├── download_pd_genomes.sh
     │   ├── download_pecto_genomes.sh
     │   └── download_same_pecto_genomes.sh
-    ├── get_cazy_cazymes.sh
-    ├── get_dbcan_cazymes_pd.sh
-    ├── get_dbcan_cazymes_pecto.sh
-    ├── run_dbcan_pd.sh
-    ├── run_dbcan_pectobacteriaceae.sh
+    ├── README.md
     └── tree
         ├── analysis
         ├── ani
-        └── phylo
+        ├── phylo
+        │   ├── align_scos.sh
+        │   ├── annotate_genomes.sh
+        │   ├── backtranslate.sh
+        │   ├── concatenate_cds.py
+        │   ├── extract_cds.py
+        │   ├── find_orthologues.sh
+        │   └── raxml_ng_build_tree.sh
+        └── README.md
 ```
 
 ## Reproducing analyses (quickstart)
