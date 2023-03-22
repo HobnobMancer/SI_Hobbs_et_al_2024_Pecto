@@ -39,6 +39,8 @@ After running the analysis, this directory will contain several additional dirs:
     │       ├── sco_cds
     │       ├── sco_cds_aligned
     │       ├── concatenated_cds
+    │       │   ├── concatenated.fasta
+    │       │   └── concatenated.part
     │       └── tree
     │           ├── 01_check
     │           ├── 02_parse
