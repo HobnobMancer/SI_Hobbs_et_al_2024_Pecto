@@ -55,6 +55,8 @@ Please raise an issue at the corresponding `GitHub` page:
     └── tree
         ├── analysis
         ├── ani
+        │   ├── build_anim_tree.R
+        │   └── run_anim.sh
         ├── phylo
         │   ├── align_scos.sh
         │   ├── annotate_genomes.sh
@@ -79,9 +81,10 @@ Structure of the `data` directory after the analysis:
     │   │   └── *.fna
     │   ├── proteomes
     │   │   └── *.faa
-    │   └── cazomes
-    │       ├── pecto_fam_genomes
-    │       └── pecto_fam_genomes_proteins
+    │   ├── cazomes
+    │   │   ├── pecto_fam_genomes
+    │   │   └── pecto_fam_genomes_proteins
+    │   └── tree
     ├── pecto_dic
     │   ├── genomes
     │   │   └── *.fna
