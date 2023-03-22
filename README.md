@@ -78,12 +78,12 @@ conda install --file requirements.txt -y
 ```
 
 1. Download datasets
-    1. `download_pecto_genomes.sh` - Downloads all genomes from NCBI Assembly when querying using the term 'Pectobacteriaceae'
-    2. `download_same_pecto_genomes.sh` - Downloads the genomes used in the analysis presented in the manuscript
-    3. `download_pd_genomes.sh` - Configures `ncbi-genome-download` to retrieve genomes for a provided list of Assembly accessions
+    1. `download_pecto_genomes.sh` - Downloads _Pectobacteriaceae_ genomes
+    2. `download_same_pecto_genomes.sh` - Download the genomes used in the manuscript
+    3. `download_pd_genomes.sh` - Download _Pectobacterium_ and _Dickeya_ reference genomes
     4. `build_cazyme_db.sh` - Build a local CAZyme db
 2. Annotate CAZomes
-    1. `get_cazy_cazymes.sh` - Retrieve CAZy family annotations from the local CAZyme db for proteins in the download genomes for both the _Pectobacteriaceae_, and _Pectobacterium_ and _Dickeya_ datasets.
+    1. `get_cazy_cazymes.sh` - Retrieve CAZy family annotations from the local CAZyme db
     2. `run_dbcan_dbcan_pectobact.sh` - Run dbCAN version 2 on _Pectobacteriaceae_ proteomes
     3. `run_dbcan_pecto_dic.sh` - Run dbCAN version 3 on _Pectobacterium_ and _Dickeya_ proteomes
     4. `get_dbcan_cazymes_pectobact.sh` - Parse dbCAN output for _Pectobacteriaceae_
