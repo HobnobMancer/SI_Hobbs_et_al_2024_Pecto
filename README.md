@@ -457,12 +457,12 @@ scripts/signalp/get_ie_cazymes.py
 
 ## Add taxonomic classifications
 
-Download the GTDB database dump from the [GTDB repository](https://data.gtdb.ecogenomic.org/releases/). Release 202.0 was used in the manuscript Hobbs et al.
+Download the GTDB database dump from the [GTDB repository](https://data.gtdb.ecogenomic.org/releases/). Release 202.0 was used in the manuscript Hobbs et al. Save the database dump (TSV file) to `data/gtdb/` directory.
 
 The bash script `add_tax.sh` was used to coordinate running `cazomevolve` to add taxonomic information to each genomic accession, in every tab delimited list of (i) CAZy family and genomic accession, and (ii) CAZy family, genomic accession and protein accession that was generated.
 
 ```bash
-scripts/taxs/add_tax/sh
+scripts/taxs/add_tax/sh <path to gtdb tsv file>
 ```
 
 Use Python scripts `add_ani_tax.py` and `add_tax_phylotree.py` to add the taxonomic information to the reconstructed ANI and phylogenetic trees, respectively.
