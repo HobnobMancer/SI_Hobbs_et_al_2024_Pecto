@@ -123,7 +123,7 @@ Structure of the `data` directory after the analysis:
     └── README.md
 ```
 
-## Reproducing analyses (quickstart)
+## Set up and reproducing analyses (quickstart)
 
 You can use this archive to browse, validate, reproduce, or build on the phylogenomics analysis for the Hobbs et al. (2023) manuscript.
 
@@ -138,6 +138,8 @@ To use `pyani` in this analysis, version 0.3+ must be installed. At the time of 
 ```bash
 scripts/download/install_pyani_v0-3x.sh
 ```
+
+Installation instructions for `signalP6` can be found [here](https://github.com/fteufel/signalp-6.0/blob/main/installation_instructions.md).
 
 1. Download datasets
     1. `download_pecto_genomes.sh` - Downloads _Pectobacteriaceae_ genomes
@@ -440,6 +442,8 @@ scripts/signalp/run_signalp.sh
 ```
 
 The output from `signalP` was written to `data/pecto_dic/signalp/pd_signalp_output`.
+
+`cazomevolve` was used to parsed
 
 ## Explore CAZome composition
 

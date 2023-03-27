@@ -7,8 +7,8 @@ matplotlib
 numpy
 orthofinder
 pandas
-pyani
 prodigal
+pyani
 raxml-ng
 seaborn
 scikit-learn
