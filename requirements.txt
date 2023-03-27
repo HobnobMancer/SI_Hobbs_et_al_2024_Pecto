@@ -11,7 +11,7 @@ pyani
 prodigal
 raxml-ng
 seaborn
-sklearn
+scikit-learn
 t-coffee
 tqdm
 upsetplot
