@@ -4,21 +4,32 @@
 #
 # Run ANIm analysis (using pyani v0.3) on downloaded genomes
 
+OUTPUT_DIR=data/pectobact/tree/ani_tree
+GENOME_DIR=data/pectobact/genomes
+
+# make output dir
+mkdir -p $OUTPUT_DIR/logs
+
 # Create database
-pyani createdb -l data/pectobact/tree/logs/pyani_01_createdb.log
+pyani createdb -l $OUTPUT_DIR/logs/pyani_01_createdb.log
 
 # Index genomes
-pyani index genomes -l data/pectobact/tree/logs/pyani_02_index.log
+pyani index \
+  -i $GENOME_DIR \
+  -l $OUTPUT_DIR/logs/pyani_02_index.log
 
 # Run ANIm analysis
-pyani anim -l data/pectobact/tree/logs/pyani_03_anim.log \
-  data/pectobact/genomes \
-  data/pectobact/tree/anim_output \
+pyani anim \
+  -i $GENOME_DIR\
+  -o $OUTPUT_DIR/anim_output \
+  -l $OUTPUT_DIR/logs/pyani_03_anim.log \
   --name "pecto_dic_ANIm"
 
 # Generate graphical anim output
-pyani plot -l data/pectobact/tree/logs/pyani_04_plot.log \
+pyani plot
+  -l $OUTPUT_DIR/logs/pyani_04_plot.log \
   --formats png,pdf \
   --method seaborn \
-  data/pectobact/tree/anim_output 1
+  -o $OUTPUT_DIR/anim_output
+  --run_id 1
   
