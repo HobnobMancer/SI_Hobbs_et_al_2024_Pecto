@@ -62,5 +62,5 @@ ncbi-genome-download \
     --flat-output \
     - v
     
-unzip data/pecto_dic/genomes/*.gz
-unzip data/pecto_dic/proteome/*.gz
+gunzip data/pecto_dic/genomes/*.gz
+gunzip data/pecto_dic/proteomes/*.gz

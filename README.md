@@ -129,16 +129,18 @@ You can use this archive to browse, validate, reproduce, or build on the phyloge
 
 We recommend creating a conda environment specific for this activity, for example using the commands:
 ```bash
-conda create -name pectobacteriaceae python=3.9 -y
+conda create -n pectobacteriaceae python=3.9 -y
 conda activate pectobacteriaceae
-conda install --file requirements.txt -y
+conda install --file requirements.txt -y -c bioconda -c conda-forge
 ```
 
 1. Download datasets
     1. `download_pecto_genomes.sh` - Downloads _Pectobacteriaceae_ genomes
     2. `download_same_pecto_genomes.sh` - Download the genomes used in the manuscript
-    3. `download_pd_genomes.sh` - Download _Pectobacterium_ and _Dickeya_ reference genomes
-    4. `build_cazyme_db.sh` - Build a local CAZyme db
+    3. `ident_missing_protomes.py` - Identify genomes were a .faa file was not available
+    4. `annotate_genomes.sh` - Predicte proteome using Prodigal
+    5. `download_pd_genomes.sh` - Download _Pectobacterium_ and _Dickeya_ reference genomes
+    6. `build_cazyme_db.sh` - Build a local CAZyme db
 2. Annotate CAZomes
     1. `get_cazy_cazymes.sh` - Retrieve CAZy family annotations from the local CAZyme db
     2. `run_dbcan_dbcan_pectobact.sh` - Run dbCAN version 2 on _Pectobacteriaceae_ proteomes
@@ -177,13 +179,33 @@ conda install --file requirements.txt -y
 scripts/download/download_pecto_genomes.sh <email>
 ```
 
-**Note:** With the continual addition of new genomic assemblies to the NCBI Assembly database, repeating the download of _Pectobacteriaceae_ genomes may generate a different dataset to that presented in Hobbs _et al._. To repeat the analysis presented in the manuscript, run the following command from the root of the directory to configure `ncbi-genome-download` to download the genomic assemblies of the genomes used in the manuscript:
+**Note:** With the continual addition of new genomic assemblies to the NCBI Assembly database, repeating the download of _Pectobacteriaceae_ genomes may generate a different dataset to that presented in Hobbs _et al._. To repeat the analysis presented in the manuscript, run the following command from the root of the directory to configure `ncbi-genome-download` to download the 660 genomic assemblies of the genomes used in the manuscript:
 
 ```bash
 scripts/download/download_same_pecto_genomes.sh
 ```
 
 In both cases, the downloaded genomic sequence files were written to the dir `data/pectobact/genomes`, the downloaded protein FASTA files were written to `data/pectobact/proteomes`.
+
+### Predict proteomes
+
+Not all genomic assemblies in NCBI are annotated, i.e. a proteome FASTA file (`.faa` file) is not available for all genomic sequences in NCBI.
+
+To identify those genomes were a proteome FASTA file was not available, and thus was not downloaded, the Python script `ident_missing_protomes.py` was run.
+
+```bash
+scripts/download/ident_missing_proteomes.py
+```
+
+The script generated a text file listing the genomic accession of each assembly for which a proteome FASTA file (`.faa`) file was not downloaded. The file was written to `data/pectobact/missing_genomes`. 
+
+If using the 660 assemblies presented in the manuscript, proteome FASTA files were not available for 104 assemblies.
+
+The script `annotate_genomes.sh` coordinates running `prodigal` on all genome sequences were a proteome FASTA file could not be retrieved, and copies the predicted proteome FASTA file to the `data/pectobact/proteome` directory.
+
+```bash
+scripts/download/annotates_genomes.sh
+```
 
 ### _Pectobacterium_ and _Dickeya_
 
@@ -320,7 +342,7 @@ GBK: `data/pecto_dic/tree/genomes/gbk`
 
 ### Identify Single Copy Orthologues (SCOs)
 
-Orthologues present in the genomes were identified using [`orthofinder`](https://github.com/davidemms/OrthoFinder)
+Orthologues present in the genomes were identified using [`orthofinder`](https://github.com/davidemms/OrthoFinder).
 
 > Emms, D.M. and Kelly, S. (2019) OrthoFinder: phylogenetic orthology inference for comparative genomics. [Genome Biology 20:238](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1832-y)
 

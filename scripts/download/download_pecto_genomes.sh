@@ -51,7 +51,8 @@ cazevolve_download_genomes \
     genomic \
     data/pectobact/genomes \
     -G \
-    -A all
+    -A all \
+    -v
 
 cazevolve_download_genomes \
     $1 \
@@ -59,8 +60,8 @@ cazevolve_download_genomes \
     protein \
     data/pectobact/proteomes \
     -G \
-    -A all
+    -A all \
+    -v
 
-
-unzip data/pectobact/genomes/*.gz
-unzip data/pectobact/proteome/*.gz
+gunzip data/pectobact/genomes/*.gz
+gunzip data/pectobact/proteomes/*.gz

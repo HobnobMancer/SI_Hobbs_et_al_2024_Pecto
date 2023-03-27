@@ -45,21 +45,21 @@
 
 ncbi-genome-download \
     all \
-    -s 'refseq' \
+    -s 'genbank' \
     -F 'fasta' \
     -A data/genomic_accessions/pectobact_accessions \
     -o data/pectobact/genomes \
     --flat-output \
-    - v
+    -v
 
 ncbi-genome-download \
     all \
-    -s 'refseq' \
+    -s 'genbank' \
     -F 'protein-fasta' \
     -A data/genomic_accessions/pectobact_accessions \
     -o data/pectobact/proteomes \
     --flat-output \
-    - v
+    -v
     
-unzip data/pectobact/genomes/*.gz
-unzip data/pectobact/proteome/*.gz
+gunzip data/pectobact/genomes/*.gz
+gunzip data/pectobact/proteomes/*.gz
