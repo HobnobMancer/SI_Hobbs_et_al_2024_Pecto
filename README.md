@@ -435,9 +435,11 @@ python3 scripts/signalp/gather_cazyme_seqs.py
 
 > Teufel, F., Almagro Armenteros, J.J., Johansen, A.R. et al. SignalP 6.0 predicts all five types of signal peptides using protein language models. Nat Biotechnol 40, 1023–1025 (2022). https://doi.org/10.1038/s41587-021-01156-3
 
-``bash
+```bash
 scripts/signalp/run_signalp.sh
 ```
+
+The output from `signalP` was written to `data/pecto_dic/signalp/pd_signalp_output`.
 
 ## Explore CAZome composition
 
