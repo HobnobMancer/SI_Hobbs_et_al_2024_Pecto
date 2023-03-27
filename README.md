@@ -313,7 +313,7 @@ The _Pectobacterium_ and _Dickeya_ lists were written to:
 
 The software package `pyani` [Pritchard et al](https://doi.org/10.1039/C5AY02550H) was used to perform an average nucleotide identify (ANI) comparison between all pairs of _Pectobacteriaceae_ genomes, using the ANIm method.
 
->Pritchard et al. (2016) "Genomics and taxonomy in diagnostics for food security: soft-rotting enterobacterial plant pathogens" Anal. Methods 8, 12-24
+> Pritchard et al. (2016) "Genomics and taxonomy in diagnostics for food security: soft-rotting enterobacterial plant pathogens" Anal. Methods 8, 12-24
 
 ```bash
 scripts/tree/ani/run_anim.sh
@@ -448,6 +448,8 @@ The Python script `get_ie_cazymes.py` was used to add the intracellular/extracel
 ```bash
 scripts/signalp/get_ie_cazymes.py
 ```
+
+`data/pecto_dic/cazomes/pd_fam_genomes_proteins` includes the headers 'Fam', 'Genome', and 'Protein'.
 
 ## Explore CAZome composition
 
