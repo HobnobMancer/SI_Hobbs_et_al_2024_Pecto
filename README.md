@@ -131,7 +131,7 @@ We recommend creating a conda environment specific for this activity, for exampl
 ```bash
 conda create -n pectobacteriaceae python=3.9 -y
 conda activate pectobacteriaceae
-conda install --file requirements.txt -y -c bioconda -c conda-forge
+conda install --file requirements.txt -y -c bioconda -c conda-forge -c predector
 ```
 
 To use `pyani` in this analysis, version 0.3+ must be installed. At the time of development, `pyani` v0.3+ must be installed from `source`, this can be done by using the bash script `install_pyani_v0-3x.sh` (run from the root of this repository):
@@ -163,12 +163,15 @@ scripts/download/install_pyani_v0-3x.sh
     5. `backtranslates.sh`
     6. `concatenate_cds.py`
     7. `raxml_ng_build_tree.sh`
-5. Explore CAZome composition
+5. Annotate intracellular and extracellular CAZymes
+    1. `gather_cazyme_seqs.py`
+    2. `run_signalp.sh`
+6. Explore CAZome composition
     1. `explore_pectobact_cazome.ipynb`
     2. `explore_pecto_dic_cazome.ipynb`
-6. Compare trees
+7. Compare trees
     1. `build_tanglegrams.R`
-7. Identify networkds of co-evolving CAZy families
+8. Identify networkds of co-evolving CAZy families
     1. `find_colevolving.sh`
 
 # Reproducing the analyses
@@ -420,7 +423,21 @@ Tree reconstructions are placed in the `tree` directory. The best estimate tree 
 scripts/tree/phylo/raxml_ng_build_tree.sh
 ```
 
+## Annotate intracellular and extracellular CAZymes
 
+To predict which CAZymes were intracellular and which were extracellular, the protein sequences of all CAZymes were gathered into a single FASTA file using the python script `gather_cazyme_seqs.py.
+
+```bash
+python3 scripts/signalp/gather_cazyme_seqs.py
+```
+
+`signalP` (version 6) ([Teufel et al.](https://www.nature.com/articles/s41587-021-01156-3)) was used to predict the presence of signal peptides in the protein sequences of the identified CAZymes.
+
+> Teufel, F., Almagro Armenteros, J.J., Johansen, A.R. et al. SignalP 6.0 predicts all five types of signal peptides using protein language models. Nat Biotechnol 40, 1023–1025 (2022). https://doi.org/10.1038/s41587-021-01156-3
+
+``bash
+scripts/signalp/run_signalp.sh
+```
 
 ## Explore CAZome composition
 
