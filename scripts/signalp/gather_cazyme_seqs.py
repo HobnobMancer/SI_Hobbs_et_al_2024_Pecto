@@ -80,3 +80,4 @@ for acc in tqdm(cazyme_accessions, desc="Gathering CAZyme seqs"):
         parsed_ids.add(acc)
 
 SeqIO.write(cazyme_seqs, CAZYME_SEQ_FILE, "fasta")
+print(f"Written {len(cazyme_accessions)} protein sequences to {CAZYME_SEQ_FILE}")

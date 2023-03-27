@@ -443,7 +443,11 @@ scripts/signalp/run_signalp.sh
 
 The output from `signalP` was written to `data/pecto_dic/signalp/pd_signalp_output`.
 
-`cazomevolve` was used to parsed
+The Python script `get_ie_cazymes.py` was used to add the intracellular/extracellular annotations to the tab delimited file `data/pecto_dic/cazomes/pd_fam_genomes_proteins`.
+
+```bash
+scripts/signalp/get_ie_cazymes.py
+```
 
 ## Explore CAZome composition
 
