@@ -134,6 +134,11 @@ conda activate pectobacteriaceae
 conda install --file requirements.txt -y -c bioconda -c conda-forge
 ```
 
+To use `pyani` in this analysis, version 0.3+ must be installed. At the time of development, `pyani` v0.3+ must be installed from `source`, this can be done by using the bash script `install_pyani_v0-3x.sh` (run from the root of this repository):
+```bash
+scripts/download/install_pyani_v0-3x.sh
+```
+
 1. Download datasets
     1. `download_pecto_genomes.sh` - Downloads _Pectobacteriaceae_ genomes
     2. `download_same_pecto_genomes.sh` - Download the genomes used in the manuscript
