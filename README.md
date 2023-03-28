@@ -462,7 +462,7 @@ Download the GTDB database dump from the [GTDB repository](https://data.gtdb.eco
 The bash script `add_tax.sh` was used to coordinate running `cazomevolve` to add taxonomic information to each genomic accession, in every tab delimited list of (i) CAZy family and genomic accession, and (ii) CAZy family, genomic accession and protein accession that was generated.
 
 ```bash
-scripts/taxs/add_tax/sh <path to gtdb tsv file>
+scripts/taxs/add_tax.sh <use email address> <path to gtdb tsv file>
 ```
 
 Use Python scripts `add_ani_tax.py` and `add_tax_phylotree.py` to add the taxonomic information to the reconstructed ANI and phylogenetic trees, respectively.
