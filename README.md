@@ -168,12 +168,16 @@ Installation instructions for `signalP6` can be found [here](https://github.com/
 5. Annotate intracellular and extracellular CAZymes
     1. `gather_cazyme_seqs.py`
     2. `run_signalp.sh`
-6. Explore CAZome composition
+6. Add taxonomic classifications
+    1. `add_taxs.sh`
+    2. `add_ani_tax.py`
+    3. `add_tax_phylotree.py`
+7. Explore CAZome composition
     1. `explore_pectobact_cazome.ipynb`
     2. `explore_pecto_dic_cazome.ipynb`
-7. Compare trees
+8. Compare trees
     1. `build_tanglegrams.R`
-8. Identify networkds of co-evolving CAZy families
+9. Identify networkds of co-evolving CAZy families
     1. `find_colevolving.sh`
 
 # Reproducing the analyses
@@ -450,6 +454,23 @@ scripts/signalp/get_ie_cazymes.py
 ```
 
 `data/pecto_dic/cazomes/pd_fam_genomes_proteins` includes the headers 'Fam', 'Genome', and 'Protein'.
+
+## Add taxonomic classifications
+
+Download the GTDB database dump from the [GTDB repository](https://data.gtdb.ecogenomic.org/releases/). Release 202.0 was used in the manuscript Hobbs et al. Save the database dump (TSV file) to `data/gtdb/` directory.
+
+The bash script `add_tax.sh` was used to coordinate running `cazomevolve` to add taxonomic information to each genomic accession, in every tab delimited list of (i) CAZy family and genomic accession, and (ii) CAZy family, genomic accession and protein accession that was generated.
+
+```bash
+scripts/taxs/add_tax.sh <use email address> <path to gtdb tsv file>
+```
+
+Use Python scripts `add_ani_tax.py` and `add_tax_phylotree.py` to add the taxonomic information to the reconstructed ANI and phylogenetic trees, respectively.
+
+```bash
+scripts/taxs/add_ani_tax.py
+scripts/tax/add_tax_phylotree.py
+```
 
 ## Explore CAZome composition
 
