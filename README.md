@@ -327,7 +327,10 @@ This created a pyani database in `data/pectobact/tree`. Graphical outputs summar
 
 **May need to run to double check what output is created, and how to get the tsv file for generating the dendrogram**.
 
-A dendrogram was reconstructed from the ANIm analysis using the R script `build_anim_tree.R`.
+A dendrogram was reconstructed from the ANIm analysis using the R script `build_anim_tree.R`, with the resulting tree written in Newick format to `data/pectobact/tree/pyani_ani_tree.new`:
+```bash
+scripts/tree/ani/build_anim_tree.R
+```
 
 ## Reconstruct phylogenetic tree
 
