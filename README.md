@@ -6,6 +6,14 @@ This repository contains supplementary information for analyses reported in Hobb
 
 Run all commands provided in the walkthrough from the root of this directory.
 
+## Data to upload
+
+* CSV File of mean cazy class freqs per genus -- results
+* CSV file of cazy fam freqs in pectobacteriaceae
+* large version of pectobacteriaceae clustermap with taxonomic annotations
+* core CAZome csv
+* modified network.R files from coinfinder to reproduce the coinfinder output
+
 ## How to use this repository.
 
 You can use this repository like a website, to browse and see how we performed the analysis, or you can download it to inspect, verify, reproduce and build on our analysis.
@@ -139,8 +147,18 @@ To use `pyani` in this analysis, version 0.3+ must be installed. At the time of 
 scripts/download/install_pyani_v0-3x.sh
 ```
 
+### Install dbCAN version 3
+The CAZyme classifier `dbCAN` verions >= 3.0.6 can be installed via Bioconda (recommended). The full installation instructions can be found [here](https://github.com/linnabrown/run_dbcan/tree/c9bad4835b2bc1a9685d693237f1d6a9d56ff3a1) -- and must be followed to ensure all additional database files are downloaded and compiled correctly.
+
+### Install dbCAN version 2
+The installation instructions for `dbCAN` v==2.0.11 can be found [here](https://github.com/linnabrown/run_dbcan/tree/fde6d7225441ef3d4cb29ea29e39cfdcc41d8b19) and were followed to install dbCAN for the analysis presented in the manuscript.
+
+**Note:** If using `cazomevolve` to run `dbCAN` after installing `dbCAN` version 2, ensure `saintBioutils` and `cazomevolve` are installed in the same virtual environment as `dbCAN` version 2.
+
+### Install signalP
 Installation instructions for `signalP6` can be found [here](https://github.com/fteufel/signalp-6.0/blob/main/installation_instructions.md).
 
+### All scripts
 1. Download datasets
     1. `download_pecto_genomes.sh` - Downloads _Pectobacteriaceae_ genomes
     2. `download_same_pecto_genomes.sh` - Download the genomes used in the manuscript
@@ -178,7 +196,8 @@ Installation instructions for `signalP6` can be found [here](https://github.com/
 8. Compare trees
     1. `build_tanglegrams.R`
 9. Identify networkds of co-evolving CAZy families
-    1. `find_colevolving.sh`
+    1. `find_colevolving_pectobact.sh`
+    2. `find_colevolving_pd.sh`
 
 # Reproducing the analyses
 
