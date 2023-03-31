@@ -153,6 +153,8 @@ The CAZyme classifier `dbCAN` verions >= 3.0.6 can be installed via Bioconda (re
 ### Install dbCAN version 2
 The installation instructions for `dbCAN` v==2.0.11 can be found [here](https://github.com/linnabrown/run_dbcan/tree/fde6d7225441ef3d4cb29ea29e39cfdcc41d8b19) and were followed to install dbCAN for the analysis presented in the manuscript.
 
+**Note:** If using `cazomevolve` to run `dbCAN` after installing `dbCAN` version 2, ensure `saintBioutils` and `cazomevolve` are installed in the same virtual environment as `dbCAN` version 2.
+
 ### Install signalP
 Installation instructions for `signalP6` can be found [here](https://github.com/fteufel/signalp-6.0/blob/main/installation_instructions.md).
 
