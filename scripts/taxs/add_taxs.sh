@@ -48,21 +48,21 @@
 # $2 - GTDB TSV file
 
 # Add tax info to fam-genome tab of pectobacteriaceae -- use NCBI classifications
-python3 cazevolve_add_taxs \
+cazevolve_add_taxs \
     $1 \
     --FG_FILE data/pectobact/cazomes/pecto_fam_genomes \
     --genus \
     --species
 
 # Add tax info to fam-genome tab of pectobacteriaceae -- use NCBI classifications
-python3 cazevolve_add_taxs \
+cazevolve_add_taxs \
     $1 \
     --FGP_FILE data/pectobact/cazomes/pecto_fam_genomes_proteins \
     --genus \
     --species
 
 # Add tax info to fam-genome tab of pecto-dic -- use NCBI classifications
-python3 cazevolve_add_taxs \
+cazevolve_add_taxs \
     $1 \
     --FGP_FILE data/pecto_dic/cazomes/pd_fam_genomes_proteins \
     --genus \
@@ -70,7 +70,7 @@ python3 cazevolve_add_taxs \
     --gtdb $2
 
 # Add tax info to fam-genome tab of pecto-dic -- use NCBI classifications
-python3 cazevolve_add_taxs \
+cazevolve_add_taxs \
     $1 \
     --FG_FILE data/pecto_dic/cazomes/pd_fam_genomes \
     --genus \
