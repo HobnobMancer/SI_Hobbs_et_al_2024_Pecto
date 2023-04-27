@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/609818373.svg)](https://zenodo.org/badge/latestdoi/609818373)
+
 # Supplementary Information: Hobbs _et al._, 2023
 
 ## Association between niche adaptation and evolution of carbohydrate active enzymes in _Pectobacteriaceae_
