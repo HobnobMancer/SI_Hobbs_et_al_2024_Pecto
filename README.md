@@ -338,6 +338,12 @@ The original figures are found in the `results` directory, and contained within 
 
 # Method: Reproducing the analyses
 
+Several of the data files required to repeat the analyses presented in the manuscript are stored (available for use) in the repo. These files are stored in the `data/` directory, and include:
+* _Pectobacteriaceae_ ANI tree
+* _Pectobacteriaceae_ tab delimited lists of CAZy families, genomes and proteins
+* _Pectobacterium_ and _Dickeya_ phylogenetic tree
+* _Pectobacterium_ and _Dickeya_ tab delimited lists of CAZy families, genomes and proteins
+
 ## Build a local CAZyme database
 
 Configure using [`cazy_webscraper`](https://hobnobmancer.github.io/cazy_webscraper/) (Hobbs _et al., 2022) to download all data from the CAZy database, and compile the data into a local CAZyme database.
