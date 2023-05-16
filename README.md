@@ -19,14 +19,6 @@ For the complete analysis and results for each data set, follow the links:
 
 Find a full list of the results [here](#results).
 
-## Data to upload
-
-* CSV File of mean cazy class freqs per genus -- results
-* CSV file of cazy fam freqs in pectobacteriaceae
-* large version of pectobacteriaceae clustermap with taxonomic annotations
-* core CAZome csv
-* modified network.R files from coinfinder to reproduce the coinfinder output
-
 ## How to use this repository.
 
 You can use this repository like a website, to browse and see how we performed the analysis, or you can download it to inspect, verify, reproduce and build on our analysis.
