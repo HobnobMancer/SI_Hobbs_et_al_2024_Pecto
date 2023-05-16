@@ -733,3 +733,32 @@ pca.plot_loadings()
 ## Compare trees
 
 ??? to include here or in the thesis supplementary ???
+
+
+## Identify associating CAZy families using `coinfinder`
+
+Use the tool [`coinfinder`](https://github.com/fwhelan/coinfinder) (Whelan et al.) to identify CAZy families that are present in the genome together more often than expected by chance and lineage.
+
+> Fiona J. Whelan, Martin Rusilowicz, & James O. McInerney. "Coinfinder: detecting significant associations and dissociations in pangenomes." doi: [https://doi.org/10.1099/mgen.0.000338](https://doi.org/10.1099/mgen.0.000338)
+
+**Generate circular trees and heatmaps:**
+
+To reproduce the output from `coinfinder` in the same structure as presented in the manuscript (i.e. a circular tree surrounded by a heatmap), overwrite the file `network.R` in `coinfinder` with the respective R script in `scripts/coevolution`, and use the corresponding bash script:
+
+* _Pectobacteriaceae_
+    * `network.R`: `scripts/coevolution/pectobact_circular_network.R`
+    * bash: `scripts/coevolution/find_coevolving_pectobact.sh`
+* _Pectobacterium_ and _Dickeya_
+    * `network.R`: `scripts/coevolution/pd_circular_network.R`
+    * bash: `scripts/coevolution/find_coevolving_pd.sh`
+
+**Generate linear trees and heatmaps, with taxonomy information:**
+
+These circular heatmaps annotate each leaf of the tree with only the respective genomic version accession. To list the taxonomic infomration as well, on each leaf of the tree, overwrite the contents in the file `network.R` in `coinfinder` with the respective R script in `scripts/coevolution`, and use the respective bash script to configure `coinfinder`:
+
+* _Pectobacteriaceae_
+    * `network.R`: `scripts/coevolution/pectobact_taxs_rectangular_network.R`
+    * bash: `scripts/coevolution/find_coevolving_pectobact_with_tax.sh`
+* _Pectobacterium_ and _Dickeya_
+    * `network.R`: `scripts/coevolution/pd_taxs_rectangular_network.R`
+    * bash: `scripts/coevolution/find_coevolving_pd_with_tax.sh`
