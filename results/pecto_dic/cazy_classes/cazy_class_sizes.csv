@@ -1,0 +1,13 @@
+,CAZyClass,Genus,MeanCazyClass,SdCazyClass,MeanClassPerc,SdClassPerc,NumOfGenomes
+0,GH,Pectobacterium,47.41,2.83,48.61,1.89,188
+2,GH,Dickeya,41.18,3.56,41.61,1.97,92
+3,GT,Pectobacterium,28.06,3.02,28.7,2.0,188
+5,GT,Dickeya,35.34,2.69,35.77,2.43,92
+6,PL,Pectobacterium,14.17,1.28,14.52,1.06,188
+8,PL,Dickeya,15.53,1.72,15.68,1.41,92
+9,CE,Pectobacterium,6.59,0.85,6.74,0.72,188
+11,CE,Dickeya,6.0,0.69,6.06,0.57,92
+12,AA,Pectobacterium,1.0,0.0,1.05,0.02,2
+14,AA,Dickeya,1.0,0.0,1.26,0.02,2
+15,CBM,Pectobacterium,5.07,0.81,5.19,0.73,188
+17,CBM,Dickeya,2.43,0.77,2.44,0.69,92
