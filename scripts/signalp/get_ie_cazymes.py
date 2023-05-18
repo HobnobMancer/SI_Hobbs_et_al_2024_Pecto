@@ -48,44 +48,70 @@ from tqdm import tqdm
 SIGNALP_FILE="data/pecto_dic/signalp/pd_signalp_output"
 THRESHOLD=0.95
 FGP_FILE="data/pecto_dic/cazomes/pd_fam_genomes_proteins"
+FGP_TAXS_FILE="data/pecto_dic/cazomes/pd_fam_genomes_proteins_taxs"
 
-print("Loading CAZy family annotations into dict")
+
+def gather_ie_cazymes(df, tax=False):
+    """Identify predicted intra- and extra-cellular CAZymes.
+
+    :param df: pandas df containing FGP_FILE data, with or without tax info
+    :param tax: bool, df contains tax data
+
+    Return nothing.
+    """
+    signalp_output = {
+        "intra": set(),  # sets of protein accs - intracellular
+        "extra": set(),  # extracellular
+    }
+    for ri in tqdm(range(len(signalp_df)), desc="Identifying intra- and extra-cellular CAZymes"):
+        protein_id = signalp_df.iloc[ri]['# ID'].split(" ")[0]
+        intracellular = True
+
+        if str(signalp_df.iloc[ri]['CS Position']).strip() != 'nan':
+            if float(signalp_df.iloc[ri]['CS Position'].split(" ")[-1]) >= THRESHOLD:
+                intracellular = False
+
+        if intracellular:
+            signalp_output['intra'].add(protein_id)
+        else:
+            signalp_output['extra'].add(protein_id)
+
+    ie_data = []
+    for ri in tqdm(range(len(df)), desc="Adding intra-/extra-cellular annotations to families"):
+        fam = df.iloc[ri]['Fam']
+        genome = df.iloc[ri]['Genome']
+        protein_id = df.iloc[ri]['Protein']
+
+        if protein_id in signalp_output['intra']:
+            fam = f"i_{fam}"
+        else:
+            fam = f"e_{fam}"
+        
+        ie_data.append([fam, genome, protein_id])
+
+    ie_fgp_df = pd.DataFrame(ie_data, columns=['Fam','Genome','Protein'])
+
+    if tax:
+        print("Writing out CSV file to data/pecto_dic/cazomes/pd_fam_genomes_proteins_taxs")
+        ie_fgp_df.to_csv("data/pecto_dic/cazomes/pd_fam_genomes_proteins_taxs", sep="\t")
+    else:
+        print("Writing out CSV file to data/pecto_dic/cazomes/pd_fam_genomes_proteins")
+        ie_fgp_df.to_csv("data/pecto_dic/cazomes/pd_fam_genomes_proteins", sep="\t")
+
+
+print("Loading CAZy family annotations")
 fgp_df = pd.read_table(FGP_FILE, header=None)
 fgp_df.columns = ['Fam', 'Genome', 'Protein']
+
+print("Loading CAZy family annotations and taxs")
+fgp_tax_df = pd.read_table(FGP_TAXS_FILE, header=None)
+fgp_tax_df.columns = ['Fam', 'Genome', 'Protein']
 
 print("Parse signalP output, and identify intra/extracellular CAZymes")
 signalp_df = pd.read_table(SIGNALP_FILE, header=1)
 signalp_df = signalp_df[['# ID', 'CS Position']]
 
-signalp_output = {
-    "intra": set(),  # sets of protein accs - intracellular
-    "extra": set(),  # extracellular
-}
-for ri in tqdm(range(len(signalp_df)), desc="Identifying intra- and extra-cellular CAZymes"):
-    protein_id = signalp_df.iloc[ri]['# ID'].split(" ")[0]
-    intracellular = True
-
-    if str(signalp_df.iloc[ri]['CS Position']).strip() != 'nan':
-        if float(signalp_df.iloc[ri]['CS Position'].split(" ")[-1]) >= THRESHOLD:
-            intracellular = False
-
-    if intracellular:
-        signalp_output['intra'].add(protein_id)
-    else:
-        signalp_output['extra'].add(protein_id)
-
-ie_data = []
-for ri in tqdm(range(len(fgp_df)), desc="Adding intra-/extra-cellular annotations to families"):
-    fam = fgp_df.iloc[ri]['Fam']
-    genome = fgp_df.iloc[ri]['Genome']
-    protein_id = fgp_df.iloc[ri]['Protein']
-
-    if protein_id in signalp_output['intra']:
-        fam = f"i_{fam}"
-    else:
-        fam = f"e_{fam}"
-    
-    ie_data.append([fam, genome, protein_id])
-
-ie_fgp_df = pd.DataFrame(ie_data, columns=['Fam','Genome','Protein'])
-ie_fgp_df.to_csv("data/pecto_dic/cazomes/pd_fam_genomes_proteins", sep="\t")
+print("Parsing FGP_FILE without taxs")
+gather_ie_cazymes(fgp_df)
+print("Parsing FGP_FILE with taxs")
+gather_ie_cazymes(fgp_tax_df)
