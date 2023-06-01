@@ -637,13 +637,13 @@ scripts/signalp/run_signalp.sh
 
 The output from `signalP` was written to `data/pecto_dic/signalp/pd_signalp_output`.
 
-The Python script `get_ie_cazymes.py` was used to add the intracellular/extracellular annotations to the tab delimited file `data/pecto_dic/cazomes/pd_fam_genomes_proteins`.
+The Python script `get_ie_cazymes.py` was used to add the intracellular/extracellular annotations to the tab delimited files `data/pecto_dic/cazomes/pd_IE_fam_genomes_proteins` and `data/pecto_dic/cazomes/pd_fam_genomes_proteins_taxs`.
 
 ```bash
 scripts/signalp/get_ie_cazymes.py
 ```
 
-`data/pecto_dic/cazomes/pd_fam_genomes_proteins` includes the headers 'Fam', 'Genome', and 'Protein'.
+`data/pecto_dic/cazomes/pd_IE_fam_genomes_proteins` and `data/pecto_dic/cazomes/pd_fam_genomes_proteins_taxs` include the headers 'Fam', 'Genome', and 'Protein'.
 
 ## Add taxonomic classifications
 
