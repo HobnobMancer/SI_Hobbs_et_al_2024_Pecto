@@ -39,15 +39,13 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# get_dbcan_cazymes_pecto
+# run_dbcan_pectobacteriaceae
 
-# Parse the output from dbCAN after parsing Pectobacterium and Dickeya protein seqs
+# Run dbCAN version 2 across Pectobacteriaceae protein sequences
 
-cazevolve_invoke_dbcan \
-    data/pecto_dic/cazomes/dbcan_input \
-    data/pecto_dic/cazomes/dbcan_output
+cazevolve_run_dbcan \
+    data/cazomes/dbcan_input \
+    data/cazomes/dbcan_output \
+    --version_2 \
+    -f -n
 
-cazevolve_get_dbcan_cazymes \
-    data/pecto_dic/cazomes/dbcan_output \
-    data/pecto_dic/cazomes/pd_fam_genomes \
-    data/pecto_dic/cazomes/pd_fam_genomes_proteins 

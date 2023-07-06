@@ -44,11 +44,11 @@
 # Parse the output from dbCAN after parsing Pectobacteriaceae protein seqs
 
 cazevolve_invoke_dbcan \
-    data/pectobact/cazomes/dbcan_input \
-    data/pectobact/cazomes/dbcan_output \
+    data/cazomes/dbcan_input \
+    data/cazomes/dbcan_output \
     --version_2
 
 cazevolve_get_dbcan_cazymes \
-    data/pectobact/cazomes/dbcan_output \
-    data/pectobact/cazomes/pecto_fam_genomes \
-    data/pectobact/cazomes/pecto_fam_genomes_proteins
+    data/cazomes/dbcan_output \
+    data/cazomes/pecto_fam_genomes \
+    data/cazomes/pecto_fam_genomes_proteins -f -n
