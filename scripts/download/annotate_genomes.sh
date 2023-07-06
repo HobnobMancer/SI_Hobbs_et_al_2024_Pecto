@@ -44,12 +44,12 @@
 # Annotate the genome sequences of genomes for which a proteome FASTA (.faa) file is not available 
 # in the NCBI Assembly database
 
-ACC_FILE="data/pectobact/missing_genomes"
+ACC_FILE="data/missing_genomes"
 ACCESSIONS=$(cat $ACC_FILE)
-GENOME_DIR=data/pectobact/genomes/*
-PROTEOME_DIR=data/pectobact/proteomes
+GENOME_DIR=data/genomes/*
+PROTEOME_DIR=data/proteomes
 
-PROD_OUTPUT=data/pectobact/prodigal
+PROD_OUTPUT=data/prodigal
 mkdir $PROD_OUTPUT
 
 # make output dirs for prodigal
@@ -62,7 +62,7 @@ mkdir $CDS_DIR
 mkdir $GBK_DIR
 
 # get paths of download genome seq files
-GENOME_PATHS=$(ls data/pectobact/genomes)
+GENOME_PATHS=$(ls data/genomes)
 
 for ACC in $ACCESSIONS
 do

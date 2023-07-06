@@ -39,28 +39,29 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# doenload_pd_genomes
+# doenload_pecto_genomes
 
-# Download genomic and proteome sequence files for pectobacterium and dickeya and an out group
-# as listed in supplementary file 1
+# Download genomic and proteome sequence files for Pectobacteriaceae
 
-ncbi-genome-download \
-    all \
-    -s 'refseq' \
-    -F 'fasta' \
-    -A data/genomic_accessions/pecto_dict_accessions \
-    -o data/pecto_dic/genomes \
-    --flat-output \
-    - v
+# $1 user email address
 
-ncbi-genome-download \
-    all \
-    -s 'refseq' \
-    -F 'protein-fasta' \
-    -A data/genomic_accessions/pecto_dict_accessions \
-    -o data/pecto_dic/proteomes \
-    --flat-output \
-    - v
-    
-gunzip data/pecto_dic/genomes/*.gz
-gunzip data/pecto_dic/proteomes/*.gz
+cazevolve_download_genomes \
+    $1 \
+    'Pectobacteriaceae' \
+    genomic \
+    data/genomes \
+    -G \
+    -A all \
+    -v
+
+cazevolve_download_genomes \
+    $1 \
+    'Pectobacteriaceae' \
+    protein \
+    data/proteomes \
+    -G \
+    -A all \
+    -v
+
+gunzip data/genomes/*.gz
+gunzip data/proteomes/*.gz

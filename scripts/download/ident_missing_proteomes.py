@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+# /usr/bin/env python
+# -*- coding: utf-8 -*-
 #
 # (c) University of St Andrews 2023
 # (c) University of Strathclyde 2023
@@ -38,30 +39,37 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+"""Identify the accessions of genomes for which a proteome FASTA file (.faa) was not downloaded"""
 
-# doenload_pecto_genomes
 
-# Download genomic and proteome sequence files for Pectobacteriaceae
+from pathlib import Path
 
-# $1 user email address
+from saintBioutils.utilities.file_io.get_paths import get_file_paths
 
-cazevolve_download_genomes \
-    $1 \
-    'Pectobacteriaceae' \
-    genomic \
-    data/pectobact/genomes \
-    -G \
-    -A all \
-    -v
 
-cazevolve_download_genomes \
-    $1 \
-    'Pectobacteriaceae' \
-    protein \
-    data/pectobact/proteomes \
-    -G \
-    -A all \
-    -v
+GENOME_DIR = Path("data/proteomes")
+ACC_FILE = "data/genomic_accessions_accessions"
+MISSING_G_FILE = "data/missing_genomes"
 
-gunzip data/pectobact/genomes/*.gz
-gunzip data/pectobact/proteomes/*.gz
+with open(ACC_FILE, "r") as fh:
+    accessions = fh.read().splitlines()
+
+print(f"File of accessions contained {len(accessions)} assembly accessions")
+
+genome_paths = get_file_paths(GENOME_DIR, suffixes=['.faa.gz', '.faa'])  # tolerate being compressed or not
+
+downloaded_genomes = [f'{genome.name.split("_")[0]}_{genome.name.split("_")[1]}' for genome in genome_paths]
+
+print(f"Found {len(downloaded_genomes)} directories in {GENOME_DIR}")
+
+missing_genomes = set(accessions).difference(set(downloaded_genomes))
+
+with open(MISSING_G_FILE, "w") as fh:
+    for genome in missing_genomes:
+        fh.write(f"{genome}\n")
+
+print(
+    f"Missing {len(missing_genomes)} proteome FASTA (.faa) files\n"
+    "Genomic accessions for these proteome FASTA files are written to:\n"
+    f"{MISSING_G_FILE}"
+)

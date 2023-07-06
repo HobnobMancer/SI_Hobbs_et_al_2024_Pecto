@@ -39,9 +39,27 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# install_pyani_v0-3x.sh
+# doenload_same_pecto_genomes
 
-# Install pyani v0.3+
+# Download the same genomic and proteome sequence files for Pectobacteriaceae as used in Hobbs et al
 
-git clone https://github.com/widdowquinn/pyani.git
-pip3 install -e pyani/
+ncbi-genome-download \
+    all \
+    -s 'genbank' \
+    -F 'fasta' \
+    -A data/genomic_accessions_accessions \
+    -o data/genomes \
+    --flat-output \
+    -v
+
+ncbi-genome-download \
+    all \
+    -s 'genbank' \
+    -F 'protein-fasta' \
+    -A data/genomic_accessions_accessions \
+    -o data/proteomes \
+    --flat-output \
+    -v
+    
+gunzip data/genomes/*.gz
+gunzip data/proteomes/*.gz
