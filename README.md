@@ -9,6 +9,8 @@ Carbohydrate Active enZyme (CAZyme) complement and association with the plant ho
 
 Run all commands provided in the walkthrough from the root of this directory.
 
+### You can find the full report, exploring the CAZomes [here](https://hobnobmancer.github.io/SI_Hobbs_et_al_2023_Pecto/notebooks/explore_pectobact_cazomes.html).
+
 ## Online supplementary
 
 Owing to the size of the data sets used, the figures are consequently compressed in the final manuscript. This remote repository contains the original full size, high resolution figures.
