@@ -54,17 +54,9 @@
 # force (-f) writing to existing output dir but do not delete (-n) data already in the output dir
 
 cazevolve_get_cazy_cazymes \
-    data/pectobact/proteomes \
+    data/proteomes \
     data/cazy/cazy_db \
-    data/pectobact/cazomes/dbcan_input \
-    data/pectobact/cazomes/pecto_fam_genomes \
-    data/pectobact/cazomes/pecto_fam_genomes_proteins \
-    -f -n
-
-cazevolve_get_cazy_cazymes \
-    data/pecto_dic/proteomes \
-    data/cazy/cazy_db \
-    data/pecto_dic/cazomes/dbcan_input \
-    data/pecto_dic/cazomes/pd_fam_genomes \
-    data/pecto_dic/cazomes/pd_fam_genomes_proteins \
+    data/cazomes/dbcan_input \
+    data/cazomes/pecto_fam_genomes \
+    data/cazomes/pecto_fam_genomes_proteins \
     -f -n
