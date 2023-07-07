@@ -1,0 +1,9 @@
+,Genus,MeanProteomeSize,SdProteomeSize,MeanProteomePerc,SdProteomePerc,NumOfGenomes,Genus,MeanProteins,SdProteins,NumOfGenomes,Genus,MeanFamilys,SdFamilys,NumOfGenomes,Genus,MeanCAZymeToFamRatio,SdCAZymeToFamRatio,NumOfGenomes
+0,Pectobacterium,4260.71,216.78,2.64,0.15,432,Pectobacterium,112.65,8.02,432,Pectobacterium,62.08,3.46,432,Pectobacterium,1.81,0.09,432
+1,Dickeya,4176.86,155.23,2.66,0.11,206,Dickeya,111.16,6.6,206,Dickeya,59.05,3.04,206,Dickeya,1.88,0.07,206
+2,Musicola,3992.0,55.76,2.31,0.05,4,Musicola,92.25,2.28,4,Musicola,50.25,0.43,4,Musicola,1.84,0.04,4
+3,Brenneria,4270.24,478.85,2.07,0.15,33,Brenneria,87.79,7.46,33,Brenneria,53.67,3.71,33,Brenneria,1.64,0.07,33
+4,Lonsdalea,3142.28,132.55,2.45,0.09,39,Lonsdalea,77.15,4.7,39,Lonsdalea,42.62,2.14,39,Lonsdalea,1.81,0.07,39
+5,Acerihabitans,4969.0,0.0,2.13,0.0,1,Acerihabitans,106.0,0.0,1,Acerihabitans,48.0,0.0,1,Acerihabitans,2.21,0.0,1
+6,Affinibrenneria,5064.0,0.0,2.13,0.0,1,Affinibrenneria,108.0,0.0,1,Affinibrenneria,48.0,0.0,1,Affinibrenneria,2.25,0.0,1
+7,Samsonia,3489.0,0.0,2.32,0.0,1,Samsonia,81.0,0.0,1,Samsonia,49.0,0.0,1,Samsonia,1.65,0.0,1

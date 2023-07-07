@@ -1,0 +1,48 @@
+,Families,Genus,Incidence
+0,"{'CE8', 'GH13', 'CBM48'}",Soft tissue targeting,635
+1,"{'PL22', 'PL2'}",Soft tissue targeting,635
+2,"{'PL22', 'PL2'}",Dickeya,205
+3,"{'CBM4', 'GH148'}",Soft tissue targeting,8
+4,"{'CBM4', 'GH148'}",Dickeya,8
+5,"{'PL3', 'GT30'}",Dickeya,205
+6,"{'GH88', 'PL35'}",Dickeya,3
+7,"{'CE11', 'GT83'}",Dickeya,204
+8,"{'GT25', 'GH16'}",Dickeya,1
+9,"{'GH5', 'PL4', 'GH19'}",Dickeya,203
+10,"{'GH121', 'GH146', 'GH154'}",Soft tissue targeting,1
+11,"{'GH121', 'GH146', 'GH154'}",Pectobacterium,1
+12,"{'GH105', 'GT56'}",Pectobacterium,425
+13,"{'CE9', 'CE8', 'GH13', 'CBM48'}",Pectobacterium,425
+14,"{'CE11', 'GH32', 'GH102'}",Pectobacterium,425
+15,"{'CBM32', 'CBM63'}",Musicola,2
+16,"{'GH36', 'GH24'}",Musicola,2
+17,"{'GT84', 'GH94'}",Soft tissue targeting,241
+18,"{'GT84', 'GH94'}",Pectobacterium,152
+19,"{'GT84', 'GH94'}",Dickeya,89
+20,"{'GT84', 'GH94'}",Hard tissue targeting,68
+21,"{'GT84', 'GH94'}",Lonsdalea,33
+22,"{'GH5', 'CBM3'}",Pectobacterium,425
+23,"{'GH5', 'CBM3'}",Hard tissue targeting,25
+24,"{'GH5', 'CBM3'}",Brenneria,25
+25,"{'GT30', 'GH13'}",Hard tissue targeting,74
+26,"{'GT0', 'GH1', 'GH73'}",Hard tissue targeting,74
+27,"{'GT8', 'GT5', 'GT35'}",Hard tissue targeting,36
+28,"{'GH15', 'GH127'}",Hard tissue targeting,1
+29,"{'GT81', 'GH31'}",Lonsdalea,38
+30,"{'GT83', 'GH8'}",Brenneria,15
+31,"{'CBM67', 'GH65'}",Hard tissue targeting,1
+32,"{'GT73', 'PL17'}",Hard tissue targeting,1
+33,"{'GT73', 'PL17'}",Brenneria,1
+34,"{'GH106', 'PL38'}",Hard tissue targeting,1
+35,"{'GH106', 'PL38'}",Brenneria,1
+36,"{'GH78', 'GT1'}",Lonsdalea,10
+37,"{'GH51', 'GH26'}",Lonsdalea,9
+38,"{'GT0', 'GH4', 'GH28', 'GH73', 'GH1'}",Lonsdalea,38
+39,"{'GT30', 'GH13', 'GH39', 'PL1', 'PL3'}",Lonsdalea,38
+40,"{'CBM50', 'GH28', 'GH103', 'GT2', 'PL9', 'GH1', 'GH3', 'GH23', 'PL1', 'GT51', 'CBM5', 'GT9'}",Soft tissue targeting,636
+41,"{'CBM50', 'CE8', 'GT1', 'GH3', 'GH23', 'PL1', 'GH33', 'CBM5', 'GT9', 'GT28', 'CE4', 'PL9', 'GH1', 'GH77', 'GH13', 'GT51', 'GH28', 'GH103', 'GH73', 'GT5', 'GH8', 'GT2', 'CBM48', 'GH105', 'GT19', 'GT35', 'GT4'}",Dickeya,206
+42,"{'PL3', 'CBM50', 'GH28', 'GH103', 'GH43', 'GT2', 'PL9', 'GH1', 'GH3', 'GH23', 'PL1', 'PL22', 'GT51', 'CBM5', 'GT9', 'PL2'}",Pectobacterium,426
+43,"{'CBM50', 'CE9', 'GH104', 'CE8', 'GT1', 'GH32', 'GH3', 'GH23', 'PL1', 'GH33', 'GH19', 'CBM5', 'GT9', 'PL2', 'GH102', 'GH5', 'GT28', 'CE4', 'PL9', 'GH1', 'GH77', 'GH13', 'CE12', 'PL22', 'GT51', 'CE1', 'GT0', 'GH2', 'GH28', 'GH103', 'GH73', 'GT83', 'GT56', 'GT5', 'GH8', 'GH31', 'CE11', 'GT26', 'GT81', 'GT2', 'GT30', 'CBM48', 'GH105', 'GT19', 'GT35', 'GH30', 'GT4', 'GH38'}",Musicola,4
+44,"{'CE11', 'GT26', 'CBM50', 'GT28', 'GT2', 'GT56', 'GH3', 'GH23', 'GT19', 'GT4', 'GT51', 'CBM5', 'GT9'}",Hard tissue targeting,75
+45,"{'CBM50', 'GH32', 'CBM32', 'GH23', 'GH3', 'GH37', 'GH19', 'CBM5', 'GT9', 'GT28', 'CE4', 'GH77', 'GT20', 'GT51', 'GT56', 'GH8', 'CE11', 'GT26', 'GT2', 'GT19', 'GH68', 'GT4'}",Lonsdalea,39
+46,"{'CBM50', 'GH4', 'GT84', 'GH94', 'CE9', 'GH32', 'GH3', 'GH23', 'CBM5', 'GT9', 'GT8', 'GH102', 'GT28', 'GH1', 'GH13', 'CE12', 'GT51', 'GT0', 'GH28', 'GH103', 'GH73', 'GT56', 'GT5', 'CE11', 'GT26', 'GT81', 'GT2', 'GT30', 'GT19', 'GH68', 'GT35', 'GT4'}",Brenneria,33
