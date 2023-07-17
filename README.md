@@ -11,6 +11,8 @@ Run all commands provided in the walkthrough from the root of this directory.
 
 ### You can find the full report, exploring the CAZomes [here](https://hobnobmancer.github.io/SI_Hobbs_et_al_2023_Pecto/notebooks/explore_pectobact_cazomes.html).
 
+All raw figure files presented in the complete report in the manuscript can be found in the [`results/` directory](https://github.com/HobnobMancer/SI_Hobbs_et_al_2023_Pecto/tree/master/results).
+
 ## Online supplementary
 
 Owing to the size of the data sets used, the figures are consequently compressed in the final manuscript. This remote repository contains the original full size, high resolution figures.
