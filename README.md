@@ -6,9 +6,26 @@
 This repository contains supplementary information for analyses reported in Hobbs et al. (2023), exploring the diversity in the 
 Carbohydrate Active enZyme (CAZyme) complement and association with the plant host range of _Pectobacteriaceae_.
 
-Run all commands provided in the walkthrough from the root of this directory.
+## You can find the full report, exploring the CAZomes [here](https://hobnobmancer.github.io/SI_Hobbs_et_al_2023_Pecto/notebooks/explore_pectobact_cazomes.html).
 
-### You can find the full report, exploring the CAZomes [here](https://hobnobmancer.github.io/SI_Hobbs_et_al_2023_Pecto/notebooks/explore_pectobact_cazomes.html).
+A citation for this work will be added once available. At the present please cite this repository as the source, the DOI:10.5281/zenodo.7699655, and the authors (in order):
+Emma E. M. Hobbs<sup>1,2,3</sup>, Tracey, M. Gloster<sup>1</sup>, Leighton Prichard<sup>2</sup>.
+
+> 1. School of Biology and Biomedical Sciences Research Complex, University of St Andrews, North Haugh, St Andrews, Fife, KY16 9ST, UK
+> 2. Strathclyde Institute of Pharmacy and Biomedical Sciences, University of Strathclyde, Glasgow G4 ORE, UK
+> 3. Cell and Molecular Sciences, James Hutton Institute, Invergowrie, Dundee DD2 5DA, UK
+
+```latex
+@misc{Hobbs2023,
+author = {Emma E. M. Hobbs and Tracey M. Gloster and Leighton Pritchard},
+title = {Association between niche adaptation and evolution of carbohydrate active enzymes in Pectobacteriaceae},
+howpublished = {\url{https://hobnobmancer.github.io/SI_Hobbs_et_al_2023_Pecto/}},
+year = {2023},
+note = {Version 1. DOI:10.5281/zenodo.7699655}
+}
+```
+
+To repeat analyses, run all commands provided in the walkthrough from the root of this directory.
 
 All raw figure files presented in the complete report in the manuscript can be found in the [`results/` directory](https://github.com/HobnobMancer/SI_Hobbs_et_al_2023_Pecto/tree/master/results).
 
