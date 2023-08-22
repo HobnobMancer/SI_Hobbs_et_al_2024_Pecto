@@ -1,7 +1,7 @@
-[![DOI](https://zenodo.org/badge/609818373.svg)](https://zenodo.org/badge/latestdoi/609818373)
-
 # Supplementary Information: Hobbs _et al._, 2023:
 ## Association between niche adaptation and evolution of carbohydrate active enzymes in _Pectobacteriaceae_
+
+[![DOI](https://zenodo.org/badge/609818373.svg)](https://zenodo.org/badge/latestdoi/609818373)
 
 This repository contains supplementary information for analyses reported in Hobbs et al. (2023), exploring the diversity in the 
 Carbohydrate Active enZyme (CAZyme) complement and association with the plant host range of _Pectobacteriaceae_.
