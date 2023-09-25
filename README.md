@@ -1,15 +1,31 @@
-[![DOI](https://zenodo.org/badge/609818373.svg)](https://zenodo.org/badge/latestdoi/609818373)
-
-# Supplementary Information: Hobbs _et al._, 2023
-
+# Supplementary Information: Hobbs _et al._, 2023:
 ## Association between niche adaptation and evolution of carbohydrate active enzymes in _Pectobacteriaceae_
+
+[![DOI](https://zenodo.org/badge/609818373.svg)](https://zenodo.org/badge/latestdoi/609818373)
 
 This repository contains supplementary information for analyses reported in Hobbs et al. (2023), exploring the diversity in the 
 Carbohydrate Active enZyme (CAZyme) complement and association with the plant host range of _Pectobacteriaceae_.
 
-Run all commands provided in the walkthrough from the root of this directory.
+## You can find the full report, exploring the CAZomes [here](https://hobnobmancer.github.io/SI_Hobbs_et_al_2023_Pecto/notebooks/explore_pectobact_cazomes.html).
 
-### You can find the full report, exploring the CAZomes [here](https://hobnobmancer.github.io/SI_Hobbs_et_al_2023_Pecto/notebooks/explore_pectobact_cazomes.html).
+A citation for this work will be added once available. At the present please cite this repository as the source, the DOI:10.5281/zenodo.7699655, and the authors (in order):
+Emma E. M. Hobbs<sup>1,2,3</sup>, Tracey, M. Gloster<sup>1</sup>, Leighton Prichard<sup>2</sup>.
+
+> 1. School of Biology and Biomedical Sciences Research Complex, University of St Andrews, North Haugh, St Andrews, Fife, KY16 9ST, UK
+> 2. Strathclyde Institute of Pharmacy and Biomedical Sciences, University of Strathclyde, Glasgow G4 ORE, UK
+> 3. Cell and Molecular Sciences, James Hutton Institute, Invergowrie, Dundee DD2 5DA, UK
+
+```latex
+@misc{Hobbs2023,
+author = {Emma E. M. Hobbs and Tracey M. Gloster and Leighton Pritchard},
+title = {Association between niche adaptation and evolution of carbohydrate active enzymes in Pectobacteriaceae},
+howpublished = {\url{https://hobnobmancer.github.io/SI_Hobbs_et_al_2023_Pecto/}},
+year = {2023},
+note = {Version 1. DOI:10.5281/zenodo.7699655}
+}
+```
+
+To repeat analyses, run all commands provided in the walkthrough from the root of this directory.
 
 All raw figure files presented in the complete report in the manuscript can be found in the [`results/` directory](https://github.com/HobnobMancer/SI_Hobbs_et_al_2023_Pecto/tree/master/results).
 
@@ -48,7 +64,131 @@ Please raise an issue at the corresponding `GitHub` page:
 The structure of this repository:
 
 ```bash
-???
+.
+├── LICENSE
+├── README.md
+├── _config.yml
+├── data
+│   ├── README.md
+│   ├── cazomes
+│   │   ├── coinfinder_pecto_fam_genomes
+│   │   ├── coinfinder_pecto_fam_genomes_taxs
+│   │   ├── pecto_fam_genomes
+│   │   ├── pecto_fam_genomes_proteins
+│   │   ├── pecto_fam_genomes_proteins_taxs
+│   │   └── pecto_fam_genomes_taxs
+│   ├── genomes
+│   │   ├── classes.txt
+│   │   └── labels.txt
+│   ├── genomic_accessions
+│   │   ├── genomes_for_coinfinder.txt
+│   │   └── pectobact_accessions
+│   ├── missing_genomes
+│   └── tree
+│       └── ani_tree
+│           ├── anim_matrix.tab
+│           ├── genomes.tab
+│           ├── logs
+│           ├── matrix_aln_lengths_4.tab
+│           ├── matrix_aln_lengths_run4.pdf
+│           ├── matrix_coverage_4.tab
+│           ├── matrix_coverage_run4.pdf
+│           ├── matrix_hadamard_4.tab
+│           ├── matrix_hadamard_run4.pdf
+│           ├── matrix_identity_4.tab
+│           ├── matrix_identity_run4.pdf
+│           ├── matrix_sim_errors_4.tab
+│           ├── matrix_sim_errors_run4.pdf
+│           ├── pyani_ani_tree.new
+│           ├── pyani_ani_tree_taxs.new
+│           └── scatter_identity_vs_coverage_run4.pdf
+├── notebooks
+│   ├── explore_pecto_dic_cazomes.html
+│   ├── explore_pectobact_cazomes.html
+│   └── explore_pectobact_cazomes.ipynb
+├── requirements.txt
+├── results
+│   ├── cazome_size
+│   │   └── cazome_sizes.csv
+│   ├── cazy_classes
+│   │   └── cazy_class_sizes.csv
+│   ├── cazy_families
+│   │   ├── cazy_fam_freqs.csv
+│   │   ├── fam_freq_clustermap.svg
+│   │   ├── paper_fam_freq_clustermap.png
+│   │   ├── paper_fam_freq_clustermap_FILTERED.svg
+│   │   ├── paper_genus_species_fam_freq_clustermap.png
+│   │   ├── paper_pheno_genus_fam_freq_clustermap.png
+│   │   └── unique_grp_fams.tsv
+│   ├── cooccurring_families
+│   │   ├── cooccurring_fams_freqs.csv
+│   │   ├── fam_corr_M_filled.csv
+│   │   ├── paper-cooccurring_fams_freqs.csv
+│   │   ├── paper-pecto-cooccurring-families.svg
+│   │   └── pecto-cooccurring-families.svg
+│   ├── core_cazome
+│   │   ├── core_cazome_freqs.csv
+│   │   ├── genera_core_cazome.svg
+│   │   └── genera_soft_hard_core_cazome.svg
+│   └── pca
+│       ├── PC1-vs-PC2
+│       │   ├── pca_pc1_vs_pc2-genus.png
+│       │   ├── pca_pc1_vs_pc2-loadings_plot.png
+│       │   └── pca_pc1_vs_pc2-species.png
+│       ├── PC1-vs-PC3
+│       │   ├── pca_pc1_vs_pc3-genus.png
+│       │   ├── pca_pc1_vs_pc3-loadings_plot.png
+│       │   └── pca_pc1_vs_pc3-species.png
+│       ├── PC1-vs-PC4
+│       │   ├── pca_pc1_vs_pc4-genus.png
+│       │   ├── pca_pc1_vs_pc4-loadings_plot.png
+│       │   └── pca_pc1_vs_pc4-species.png
+│       ├── PC2-vs-PC3
+│       │   ├── pca_pc2_vs_pc3-genus.png
+│       │   ├── pca_pc2_vs_pc3-loadings_plot.png
+│       │   └── pca_pc2_vs_pc3-species.png
+│       ├── PC2-vs-PC4
+│       │   ├── pca_pc2_vs_pc4-genus.png
+│       │   ├── pca_pc2_vs_pc4-loadings_plot.png
+│       │   └── pca_pc2_vs_pc4-species.png
+│       ├── PC3-vs-PC4
+│       │   ├── pca_pc3_vs_pc4-genus.png
+│       │   ├── pca_pc3_vs_pc4-loadings_plot.png
+│       │   └── pca_pc3_vs_pc4-species.png
+│       ├── pca_explained_variance.png
+│       ├── pca_pc_screen_genus.svg
+│       ├── pca_pc_screen_species.svg
+│       └── pectobact_pca_scree.png
+├── scripts
+│   ├── README.md
+│   ├── annotate_cazome
+│   │   ├── get_cazy_cazymes.sh
+│   │   ├── get_dbcan_cazymes.sh
+│   │   └── run_dbcan.sh
+│   ├── coevolution
+│   │   ├── find_coevolving_pectobact.sh
+│   │   ├── find_coevolving_pectobact_with_tax.sh
+│   │   ├── pectobact_circular_network.R
+│   │   └── pectobact_taxs_rectangular_network.R
+│   ├── download
+│   │   ├── annotate_genomes.sh
+│   │   ├── build_cazyme_database.sh
+│   │   ├── download_genomes.sh
+│   │   ├── download_same_genomes.sh
+│   │   └── ident_missing_proteomes.py
+│   ├── taxs
+│   │   ├── add_ani_tax.py
+│   │   └── add_taxs.sh
+│   └── tree
+│       ├── README.md
+│       └── ani
+│           ├── build_anim_tree.R
+│           ├── build_anim_tree.sh
+│           ├── parse_anim_tab.py
+│           └── run_anim.sh
+└── structure
+
+28 directories, 94 files
 ```
 
 ## Set up and reproducing analyses (quickstart)
