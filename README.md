@@ -174,7 +174,7 @@ The structure of this repository:
 │   │   ├── annotate_genomes.sh
 │   │   ├── build_cazyme_database.sh
 │   │   ├── download_genomes.sh
-│   │   ├── download_same_genomes.sh
+│   │   ├── download_ms_genomes.sh
 │   │   └── ident_missing_proteomes.py
 │   ├── taxs
 │   │   ├── add_ani_tax.py
@@ -213,7 +213,7 @@ The installation instructions for `dbCAN` v==2.0.11 can be found [here](https://
 ### All scripts
 1. Download datasets
     1. `download_genomes.sh` - Search and download all _Pectobacteriaceae_ genomes in NCBI
-    2. `download_same_genomes.sh` - Download the genomes used in the manuscript
+    2. `download_ms_genomes.sh` - Download the genomes used in the manuscript
     3. `ident_missing_protomes.py` - Identify genomes were a .faa file was not available
     4. `annotate_genomes.sh` - Predicte proteome using Prodigal
     5. `build_cazyme_db.sh` - Build a local CAZyme db
@@ -279,7 +279,7 @@ scripts/download/download_genomes.sh <email>
 **Note:** With the continual addition of new genomic assemblies to the NCBI Assembly database, repeating the download of _Pectobacteriaceae_ genomes may generate a different dataset to that presented in Hobbs _et al._. To repeat the analysis presented in the manuscript, run the following command from the root of the directory to configure `ncbi-genome-download` to download the 660 genomic assemblies of the genomes used in the manuscript:
 
 ```bash
-scripts/download/download_same_genomes.sh
+scripts/download/download_ms_genomes.sh
 ```
 
 In both cases, the downloaded genomic sequence files were written to the dir `data/genomes`, the downloaded protein FASTA files were written to `data/proteomes`.
