@@ -13,6 +13,6 @@ pyani
 raxml-ng
 seaborn
 scikit-learn
-t-coffee
+statsmodels
 tqdm
 upsetplot
