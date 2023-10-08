@@ -12,6 +12,7 @@ prodigal
 pyani
 raxml-ng
 seaborn
+scipy
 scikit-learn
 statsmodels
 tqdm
