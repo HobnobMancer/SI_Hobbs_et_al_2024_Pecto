@@ -47,7 +47,7 @@ ncbi-genome-download \
     all \
     -s 'genbank' \
     -F 'fasta' \
-    -A data/genomic_accessions_accessions \
+    -A data/genomic_accessions/pectobact_accessions \
     -o data/genomes \
     --flat-output \
     -v
@@ -56,7 +56,7 @@ ncbi-genome-download \
     all \
     -s 'genbank' \
     -F 'protein-fasta' \
-    -A data/genomic_accessions_accessions \
+    -A data/genomic_accessions/pectobact_accessions \
     -o data/proteomes \
     --flat-output \
     -v
