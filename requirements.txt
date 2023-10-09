@@ -11,6 +11,7 @@ pandas
 prodigal
 pyani
 raxml-ng
+researchpy
 seaborn
 scipy
 scikit-learn
