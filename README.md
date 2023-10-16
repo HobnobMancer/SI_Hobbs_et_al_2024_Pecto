@@ -391,9 +391,17 @@ Exploration of the CAZomes in the data set was preformed within a `jupyter noteb
 
 Specifically, the analyses performed in the notebook was executed using the module `cazomevolve.cazome.explore`, which contains functions for exploring the CAZome annotated by `cazomevolve`.
 
-## Compare trees
+### Build rare faction plots
 
-??? to include here or in the thesis supplementary ???
+The R script `build_rarefaction_plots.R` was used to estimate the degree of diversity and completeness of the CAZome annotations in the dataset, specifically using the R package [`Vegan`](https://github.com/vegandevs/vegan) (Dixon _et al._, 2003).
+
+> Dixon, P. (2003), VEGAN, a package of R functions for community ecology. Journal of Vegetation Science, 14: 927-930. [https://doi.org/10.1111/j.1654-1103.2003.tb02228.x](https://doi.org/10.1111/j.1654-1103.2003.tb02228.x)
+
+To repeat the analysis, run the following bash command from the root of the reposistory **after** having the Jupyter Notebook (otherwise the script will be unable to find the necessary input files):
+
+```bash
+scripts/rare_factions/build_rarefaction_plots.R
+```
 
 ## Identify associating CAZy families using `coinfinder`
 
