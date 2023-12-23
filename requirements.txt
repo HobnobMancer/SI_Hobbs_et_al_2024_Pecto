@@ -11,8 +11,10 @@ pandas
 prodigal
 pyani
 raxml-ng
+researchpy
 seaborn
+scipy
 scikit-learn
-t-coffee
+statsmodels
 tqdm
 upsetplot

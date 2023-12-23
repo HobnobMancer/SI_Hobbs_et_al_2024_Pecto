@@ -1,0 +1,4 @@
+,group1,group2,meandiff,p-adj,lower,upper,reject
+0,Hard,Soft,0.3753,0.0,0.3331,0.4175,True
+1,Hard,Unknown,0.0371,0.8757,-0.1404,0.2145,False
+2,Soft,Unknown,-0.3382,0.0,-0.5117,-0.1648,True

@@ -174,7 +174,7 @@ The structure of this repository:
 │   │   ├── annotate_genomes.sh
 │   │   ├── build_cazyme_database.sh
 │   │   ├── download_genomes.sh
-│   │   ├── download_same_genomes.sh
+│   │   ├── download_ms_genomes.sh
 │   │   └── ident_missing_proteomes.py
 │   ├── taxs
 │   │   ├── add_ani_tax.py
@@ -213,7 +213,7 @@ The installation instructions for `dbCAN` v==2.0.11 can be found [here](https://
 ### All scripts
 1. Download datasets
     1. `download_genomes.sh` - Search and download all _Pectobacteriaceae_ genomes in NCBI
-    2. `download_same_genomes.sh` - Download the genomes used in the manuscript
+    2. `download_ms_genomes.sh` - Download the genomes used in the manuscript
     3. `ident_missing_protomes.py` - Identify genomes were a .faa file was not available
     4. `annotate_genomes.sh` - Predicte proteome using Prodigal
     5. `build_cazyme_db.sh` - Build a local CAZyme db
@@ -279,7 +279,7 @@ scripts/download/download_genomes.sh <email>
 **Note:** With the continual addition of new genomic assemblies to the NCBI Assembly database, repeating the download of _Pectobacteriaceae_ genomes may generate a different dataset to that presented in Hobbs _et al._. To repeat the analysis presented in the manuscript, run the following command from the root of the directory to configure `ncbi-genome-download` to download the 660 genomic assemblies of the genomes used in the manuscript:
 
 ```bash
-scripts/download/download_same_genomes.sh
+scripts/download/download_ms_genomes.sh
 ```
 
 In both cases, the downloaded genomic sequence files were written to the dir `data/genomes`, the downloaded protein FASTA files were written to `data/proteomes`.
@@ -391,9 +391,17 @@ Exploration of the CAZomes in the data set was preformed within a `jupyter noteb
 
 Specifically, the analyses performed in the notebook was executed using the module `cazomevolve.cazome.explore`, which contains functions for exploring the CAZome annotated by `cazomevolve`.
 
-## Compare trees
+### Build rare faction plots
 
-??? to include here or in the thesis supplementary ???
+The R script `build_rarefaction_plots.R` was used to estimate the degree of diversity and completeness of the CAZome annotations in the dataset, specifically using the R package [`Vegan`](https://github.com/vegandevs/vegan) (Dixon _et al._, 2003).
+
+> Dixon, P. (2003), VEGAN, a package of R functions for community ecology. Journal of Vegetation Science, 14: 927-930. [https://doi.org/10.1111/j.1654-1103.2003.tb02228.x](https://doi.org/10.1111/j.1654-1103.2003.tb02228.x)
+
+To repeat the analysis, run the following bash command from the root of the reposistory **after** having the Jupyter Notebook (otherwise the script will be unable to find the necessary input files):
+
+```bash
+scripts/rare_factions/build_rarefaction_plots.R
+```
 
 ## Identify associating CAZy families using `coinfinder`
 
