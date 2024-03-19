@@ -1,4 +1,4 @@
-# Supplementary Information: Hobbs _et al._, 2023:
+# Supplementary Information: Hobbs _et al._, 2024:
 ## Association between niche adaptation and evolution of carbohydrate active enzymes in _Pectobacteriaceae_
 
 [![DOI](https://zenodo.org/badge/609818373.svg)](https://zenodo.org/badge/latestdoi/609818373)
@@ -19,7 +19,7 @@ Emma E. M. Hobbs<sup>1,2,3</sup>, Tracey, M. Gloster<sup>1</sup>, Leighton Prich
 @misc{Hobbs2023,
 author = {Emma E. M. Hobbs and Tracey M. Gloster and Leighton Pritchard},
 title = {Association between niche adaptation and evolution of carbohydrate active enzymes in Pectobacteriaceae},
-howpublished = {\url{https://hobnobmancer.github.io/SI_Hobbs_et_al_2023_Pecto/}},
+howpublished = {\url{https://hobnobmancer.github.io/SI_Hobbs_et_al_2024_Pecto/}},
 year = {2023},
 note = {Version 1. DOI:10.5281/zenodo.7699655}
 }
