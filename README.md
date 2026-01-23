@@ -6,6 +6,12 @@
 This repository contains supplementary information for analyses reported in Hobbs et al. (2023) Thesis and BioRxiv pre-print (Hobbs et al. 2026), exploring the diversity in the 
 Carbohydrate Active enZyme (CAZyme) complement and association with the plant host range of _Pectobacteriaceae_.
 
+## SI PDFs
+
+[Hobbs_et_al_SI_Pectobacteriaceae.pdf](https://github.com/HobnobMancer/SI_Hobbs_et_al_2024_Pecto/blob/master/Hobbs_et_al_SI_Pectobacteriaceae.pdf) contains the supplementary data and information for the Hobbs et al., 2026 publication.
+
+[Hobbs_PhD_Thesis_Chapter_7_Pectobacteriaceae_SI.pdf](https://github.com/HobnobMancer/SI_Hobbs_et_al_2024_Pecto/blob/master/Hobbs_PhD_Thesis_Chapter_7_Pectobacteriaceae_SI.pdf) contains the supplementary data and information for Hobbs et al., 2023 PhD thesis.
+
 ## You can find the full report, exploring the CAZomes [here](https://hobnobmancer.github.io/SI_Hobbs_et_al_2024_Pecto/notebooks/explore_pectobact_cazomes.html).
 
 A citation for this work will be added once available. At the present please cite this repository as the source, the DOI:10.5281/zenodo.7699655, and the authors (in order):
