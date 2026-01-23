@@ -1,12 +1,12 @@
-# Supplementary Information: Hobbs _et al._, 2024:
-## Association between niche adaptation and evolution of carbohydrate active enzymes in _Pectobacteriaceae_
+# Supplementary Information: Hobbs _et al._:
+## Carbohydrate active enzymes in Pectobacteriaceae: coevolving enzyme sets and host adaptation
 
 [![DOI](https://zenodo.org/badge/609818373.svg)](https://zenodo.org/badge/latestdoi/609818373)
 
-This repository contains supplementary information for analyses reported in Hobbs et al. (2023), exploring the diversity in the 
+This repository contains supplementary information for analyses reported in Hobbs et al. (2023) Thesis and BioRxiv pre-print (Hobbs et al. 2026), exploring the diversity in the 
 Carbohydrate Active enZyme (CAZyme) complement and association with the plant host range of _Pectobacteriaceae_.
 
-## You can find the full report, exploring the CAZomes [here](https://hobnobmancer.github.io/SI_Hobbs_et_al_2023_Pecto/notebooks/explore_pectobact_cazomes.html).
+## You can find the full report, exploring the CAZomes [here](https://hobnobmancer.github.io/SI_Hobbs_et_al_2024_Pecto/notebooks/explore_pectobact_cazomes.html).
 
 A citation for this work will be added once available. At the present please cite this repository as the source, the DOI:10.5281/zenodo.7699655, and the authors (in order):
 Emma E. M. Hobbs<sup>1,2,3</sup>, Tracey, M. Gloster<sup>1</sup>, Leighton Prichard<sup>2</sup>.
@@ -27,7 +27,7 @@ note = {Version 1. DOI:10.5281/zenodo.7699655}
 
 To repeat analyses, run all commands provided in the walkthrough from the root of this directory.
 
-All raw figure files presented in the complete report in the manuscript can be found in the [`results/` directory](https://github.com/HobnobMancer/SI_Hobbs_et_al_2023_Pecto/tree/master/results).
+All raw figure files presented in the complete report in the manuscript can be found in the [`results/` directory](https://github.com/HobnobMancer/SI_Hobbs_et_al_2024_Pecto/tree/master/results).
 
 ## Online supplementary
 
@@ -35,7 +35,7 @@ Owing to the size of the data sets used, the figures are consequently compressed
 
 Additionally, some analyses are only briefly mentioned in the manuscript. The full method and results of these analyses are stored in this repository.
 
-For the complete analysis of the CAZyme complements (i.e. the CAZomes) are available in the [`jupyter notebook`](https://hobnobmancer.github.io/SI_Hobbs_et_al_2023_Pecto/notebooks/explore_pectobact_cazomes.html).
+For the complete analysis of the CAZyme complements (i.e. the CAZomes) are available in the [`jupyter notebook`](https://hobnobmancer.github.io/SI_Hobbs_et_al_2024_Pecto/notebooks/explore_pectobact_cazomes.html).
 
 Find a full list of the results [here](#results).
 
@@ -48,16 +48,16 @@ You can use this repository like a website, to browse and see how we performed t
 You can use `git` to _clone_ this repository to your local hard drive:
 
 ```bash
-git clone git@github.com:HobnobMancer/SI_Hobbs_et_al_2023_Pecto.git
+git clone git@github.com:HobnobMancer/SI_Hobbs_et_al_2024_Pecto.git
 ```
 
-Or you can download it as a compressed `.zip` archive from [this link](https://github.com/HobnobMancer/SI_Hobbs_et_al_2023_Pecto/archive/refs/heads/master.zip).
+Or you can download it as a compressed `.zip` archive from [this link](https://github.com/HobnobMancer/SI_Hobbs_et_al_2024_Pecto/archive/refs/heads/master.zip).
 
 ## If you have problems with this repository
 
 Please raise an issue at the corresponding `GitHub` page:
 
-* [Issues for this repository](https://github.com/HobnobMancer/SI_Hobbs_et_al_2023_Pecto/issues)
+* [Issues for this repository](https://github.com/HobnobMancer/SI_Hobbs_et_al_2024_Pecto/issues)
 
 ## Repo structure
 
@@ -244,8 +244,8 @@ The installation instructions for `dbCAN` v==2.0.11 can be found [here](https://
 Owing to the size of the data sets used, the figures are consequently compressed in the final manuscript. This remote repository contains the original full size, high resolution figures.
 
 The original figures are found in the `results` directory, and contained within the `jupyter notebooks` used to run the analyses, which can be found here (the raw notebooks are for downloading and re-running locally, the website version are for viewing the results):
-* [raw notebook](https://github.com/HobnobMancer/SI_Hobbs_et_al_2023_Pecto/blob/master/notebooks/explore_pectobact_cazomes.ipynb)
-* [website](https://hobnobmancer.github.io/SI_Hobbs_et_al_2023_Pecto/notebooks/explore_pectobact_cazomes.html)
+* [raw notebook](https://github.com/HobnobMancer/SI_Hobbs_et_al_2024_Pecto/blob/master/notebooks/explore_pectobact_cazomes.ipynb)
+* [website](https://hobnobmancer.github.io/SI_Hobbs_et_al_2024_Pecto/notebooks/explore_pectobact_cazomes.html)
 
 
 # Method: Reproducing the analyses
@@ -386,8 +386,8 @@ scripts/taxs/add_ani_tax.py
 ## Explore CAZome composition
 
 Exploration of the CAZomes in the data set was preformed within a `jupyter notebook`, which is available in this repository  (the raw notebooks  is for downloading and re-running locally, the website version is for viewing the results):
-* [raw notebook](https://github.com/HobnobMancer/SI_Hobbs_et_al_2023_Pecto/blob/master/notebooks/explore_pectobact_cazomes.ipynb)
-* [website](https://hobnobmancer.github.io/SI_Hobbs_et_al_2023_Pecto/notebooks/explore_pectobact_cazomes.html)
+* [raw notebook](https://github.com/HobnobMancer/SI_Hobbs_et_al_2024_Pecto/blob/master/notebooks/explore_pectobact_cazomes.ipynb)
+* [website](https://hobnobmancer.github.io/SI_Hobbs_et_al_2024_Pecto/notebooks/explore_pectobact_cazomes.html)
 
 Specifically, the analyses performed in the notebook was executed using the module `cazomevolve.cazome.explore`, which contains functions for exploring the CAZome annotated by `cazomevolve`.
 
